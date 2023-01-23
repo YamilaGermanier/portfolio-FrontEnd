@@ -1,0 +1,84 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*BARRA DE NAVEGACIÓN*/
+
+.navbar {
+  padding: 0px;
+  background-color: #12b395;
+  height: 95px;
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #12b395;
+}
+
+.redes i {
+  padding: 0.5rem;
+  color: #fafafa;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 35px;
+}
+
+.redes i:hover {
+  color: rgb(86, 86, 86);
+}
+
+.navbar li a {
+  color: white;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.2rem;
+}
+
+.navbar li a:hover {
+  color: rgb(86, 86, 86);
+}
+
+.btn:hover {
+  background-color: rgb(86, 86, 86);
+  color: antiquewhite;
+  border-color:rgb(86, 86, 86);
+}
+
+/* Generalidades*/
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*SECCIÓN PRINCIPAL */
+
+.hero {
+  background-color: antiquewhite;
+  min-height: 450px;
+  text-align: center;
+}
+
+.hero-principal {
+  padding:3rem;
+}
+
+.hero h1 {
+  font-family:'Faster One', cursive;
+}
+
+.hero h2 {
+  font-family: 'Rampart One', cursive;
+}
+
+.hero-imagen-desarrollador {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 20px;
+}
