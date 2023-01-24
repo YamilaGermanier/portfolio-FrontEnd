@@ -82,3 +82,77 @@ section {
   border-radius: 50%;
   margin: 20px;
 }
+
+/* Sección Educación*/
+
+.educación {
+  padding: 40px;
+}
+
+.seccion-oscura {
+  background-color: rgb(0, 0, 0);
+}
+
+.seccion-titulo {
+  font-family: 'Rampart One', cursive;
+  color: antiquewhite;
+  padding: 20px;
+}
+
+.card-deck {
+  opacity: 0.8;
+}
+
+.card {
+  margin: 10px;
+}
+
+.card:hover {
+  background-color: antiquewhite;
+}
+
+.card-body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body img {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10% ;
+}
+
+/* Sección Habilidades */
+
+.skills {
+  background-color:#096050;
+  padding-bottom: 30px;
+}
+
+.progress {
+  margin: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px){
+  .card-deck{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
