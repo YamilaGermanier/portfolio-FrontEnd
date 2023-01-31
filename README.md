@@ -12,3 +12,5 @@
  - cambié el banner x uno hecho en corel
  - agregué secciones: sobre mí, experiencia, proyectos, contacto y footer
  - falta agregar link al repositorio de la calculadora para el primer proyecto
+
+31/01/23 - Agrego repo del primer proyecto (calculadoraJS)
