@@ -22,12 +22,12 @@ body {
 }
 
 .redes i {
-  padding: 0.5rem;
-  color: #fafafa;
+  padding: 0rem;
+  color: #12b395;
   height: 100%;
   width: 100%;
   border-radius: 10px;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .redes i:hover {
