@@ -99,11 +99,17 @@ section {
   font-family: 'Rampart One', cursive;
 }
 
+.hero h4 {
+  margin-top: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+}
+
 .hero-imagen-desarrollador {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  margin: 20px;
+  margin: 0.5rem;
 }
 
 /* Sobre mi */
@@ -322,6 +328,10 @@ form {
   font-family:'Tangerine', cursive;
   font-size: 25px;
 }
+
+
+
+/* RESPONSIVE*/
 
 @media screen and (min-width: 992px){
   .card-deck{
