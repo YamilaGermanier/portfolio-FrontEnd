@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { BannerComponent } from './components/banner/banner.component';
-import { LogoComponent } from './components/logo/logo.component';
 import { SectionHeroComponent } from './components/section-hero/section-hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalLoginComponent } from './Modales/modal-login/modal-login.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     NavbarComponent,
     LoginComponent,
     BannerComponent,
-    LogoComponent,
     SectionHeroComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    ModalLoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

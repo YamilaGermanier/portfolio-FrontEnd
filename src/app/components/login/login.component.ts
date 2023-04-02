@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalLoginComponent } from 'src/app/Modales/modal-login/modal-login.component';
 
 @Component({
   selector: 'app-login',
