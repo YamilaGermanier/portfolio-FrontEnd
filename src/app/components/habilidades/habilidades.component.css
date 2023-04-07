@@ -1,0 +1,16 @@
+.skills {
+    height: fit-content;
+    padding: 8rem;
+  }
+  
+  .progress {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+  }
+  
+  .skill_tech p {
+    color: whitesmoke;
+    font-size: 1.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

@@ -1,8 +1,8 @@
 <!-- Barra de navegación-->
-<div class="barra">
+<div class="barra fixed-top">
 
 
-<nav class="navbar navbar-expand-lg fixed-top" >
+<nav class="navbar navbar-expand-lg" >
     <div class="container-fluid">
 
         <!-- Botón/navbar para dispositivos móviles-->
@@ -50,6 +50,10 @@
             </div>
         </div>
     </div>
+    <!-- Button trigger modal Login -->
+    <button type="button" class="btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#loginModal" routerLink="/loginModal">
+        <i class="fa-solid fa-user"></i>
+    </button>
 </nav>
-<app-login></app-login>
 </div>
+<app-login></app-login>

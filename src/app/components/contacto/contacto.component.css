@@ -1,0 +1,43 @@
+.contacto {
+    height: 45rem;
+  }
+  
+  .btn form {
+    display: flex;
+    align-content: center;
+  }
+  
+  label {
+    color: #000;
+    font-weight: bolder;
+  
+  }
+  
+  input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid black;
+   ;
+    }
+  
+  input:focus,
+  textarea:focus { 
+    border-color: #000;
+  }
+  
+  textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  
+  .contacto form div .input {
+    margin-left: 10px;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 420px;
+    padding: 1em;
+  }
+  
