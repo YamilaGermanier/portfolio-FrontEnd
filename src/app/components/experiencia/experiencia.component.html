@@ -11,21 +11,20 @@
     </div>
 
 
-    <h1 class="seccion-titulo justify-content-center">Experiencia</h1>
+    <h1 class="seccion-titulo justify-content-center">Experiencias</h1>
 
-    <div class="container-fluid tablaExp">
+    <div class="container-fluid tablaExp" *ngFor="let experiencia of experiencias">
 
         <div class="row my-5">
 
             <div class="col-md-2">
-                2020 - 2023
+                {{experiencia.periodo}}
             </div>
             <div class="col-md-3">
-                Traductora freelance
+                {{experiencia.puesto}}
             </div>
             <div class="col-md-5">
-                He trabajado con clientes particulares en la traducción de documentos de diversa índole. Esta
-                experiencia me permitió fortalecer la seriedad y versatilidad ante las necesidades de cada cliente.
+                {{experiencia.descripcion}}
             </div>
             <div class="col-md-2">
 
@@ -46,14 +45,15 @@
 
         </div>
 
+        <!--
+
         <div class="row my-5">
 
             <div class="col-md-2">
-
-                2021 - 2023
+                {{experiencia.periodo}}
             </div>
             <div class="col-md-3">
-                Profesora de Francés
+                {{experiencia.puesto}}
             </div>
             <div class="col-md-5">
                 Actualmente me desempeño como docente en el Colegio “Justo José de Urquiza” y la EET Nº1 “Ana Urquiza de
@@ -76,7 +76,7 @@
                 </ul>
 
             </div>
-        </div>
+        </div -->
 
     </div>
 

@@ -1,0 +1,124 @@
+{
+    "nombre": "Yamila",
+    "apellido": "Germanier",
+    "titulo": "Desarrolladora Web Full Stack Junior",
+    "ciudad": "Concepción del Uruguay, E.R.",
+    "sobre mi":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias autem, nisi esse accusantium eum consequatur iste laudantium vel sed architecto, aliquam recusandae numquam soluta dolores, ea laborum asperiores deleniti! Tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia provident sapiente sed obcaecati consequuntur, libero ipsum error laudantium perferendis aliquid fugiat quidem iusto eveniet perspiciatis omnis amet magni quas?",
+
+    "banner":{
+        "url":"../assets/img/banner-03.jpg",
+        "descripcionImagen":"Imagen de banner con una Notebook, plantas, café y gatitos"
+    }  
+    ,
+    "experiencias":[
+        {
+            "id":1,
+            "periodo": "2020 - 2023",
+            "puesto":"Traductora freelance",
+            "descripcion":"He trabajado con clientes particulares en la traducción de documentos de diversa índole. Esta            experiencia me permitió fortalecer la seriedad y versatilidad ante las necesidades de cada cliente."
+        },
+        {
+            "id":2,
+            "periodo": "2021 - 2023",
+            "puesto":"Profesora de Francés",
+            "descripcion":"Actualmente me desempeño como docente en el Colegio “Justo José de Urquiza” y la EET Nº1 “Ana Urquiza de Victorica”. Esta experiencia fortaleció mis habilidades de comunicación, para hablar de forma clara y concisa."
+        }
+    ],
+
+    "estudios":[
+        {
+            "titulos":[
+                {
+                    "id":1,
+                    "logo-institucion":"../assets/img/Logo-Uader-FCyT",
+                    "nombre-titulo":"Analista de sistemas",
+                    "institucion":"UADER, CyT",
+                    "fecha-egreso":"(En curso)"
+                },
+                {
+                    "id":2,
+                    "logo-institucion":"../assets/img/Logo-Uader-FHAyCS",
+                    "nombre-titulo":"Profesorado en francés",
+                    "institucion":"UADER, FHAyCS",
+                    "fecha-egreso":"(En curso)"
+                },
+                {
+                    "id":3,
+                    "logo-institucion":"../assets/img/Logo-Uader-FHAyCS",
+                    "nombre-titulo":"Traductorado en francés",
+                    "institucion":"UADER, FHAyCS",
+                    "fecha-egreso":"2020"
+                }
+            ]
+        },
+
+        {
+            "capacitaciones": [
+                {
+                    "id":1,
+                    "fecha de expedision":"2022",
+                    "nombre-capacitacion":"Formación de expertos en ciencia de datos",
+                    "institucion":"Dirección de Producción de la Municipalidad de Concepción del Uruguay"
+                },
+                {
+                    "id":2,
+                    "fecha de expedision":"2022",
+                    "nombre-capacitacion":"#SéProgramar",
+                    "institucion":"Plan Nacional #ArgentinaPrograma"
+                },
+                {
+                    "id":3,
+                    "fecha de expedision":"2022",
+                    "nombre-capacitacion":"Rompiendo estereotipos: programación inclusiva para mujeres y diversidades",
+                    "institucion":"Dirección de Producción de la Municipalidad de Concepción del Uruguay, UADER CyT."
+                },
+                {
+                    "id":4,
+                    "fecha de expedision":"2021",
+                    "nombre-capacitacion":"Diseño Gráfico y de páginas web",
+                    "institucion":"Educación para jóvenes y adultos, CGE."
+                }
+            ]
+        }
+
+
+    ],
+
+    "habilidades": [
+        {
+            "id": 1,
+            "tecnología":"HTML 5",
+            "porcentaje":70
+        },
+        {
+            "id": 2,
+            "tecnología":"CSS 3",
+            "porcentaje":40
+        },
+        {
+            "id": 3,
+            "tecnología":"JavaScript",
+            "porcentaje":25
+        },
+        {
+            "id": 4,
+            "tecnología":"Bootstrap",
+            "porcentaje":30
+        },
+        {
+            "id": 5,
+            "tecnología":15
+        }
+    ],
+
+    "proyectos": [
+        {
+            "id":1,
+            "imagen": "../assets/img/calculator.jpg",
+            "nombre-proyecto":"Proyecto 1",
+            "link-repositorio":"https://github.com/YamilaGermanier/Proyecto---Calculadora-JS.git"
+        }
+    ]
+
+}
+
