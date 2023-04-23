@@ -32,3 +32,11 @@ section {
   padding: 20px;
 }
 
+/*Modales errores*/ 
+.error{
+    color:red
+  }
+  
+  .border-danger{
+    border-color: red;
+  }

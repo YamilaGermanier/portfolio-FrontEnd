@@ -12,10 +12,10 @@
 
 
         <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
-          <img class="hero-imagen-desarrollador" src="./assets/img/foto_perfil.jpg" alt="Foto Personal">
-          <h1>¡Hola! Soy Yamila Germanier </h1>
-          <h2>Desarrolladora Web Full Stack Junior </h2>
-          <h4><i class="bi bi-geo-alt"></i> Concepción del Uruguay, E.R.</h4>
+          <img class="hero-imagen-desarrollador" [src]="imagenPerfil" [alt]="descripcion_perfil">
+          <h1> {{mensaje}} {{nombre}} {{apellido}} </h1>
+          <h2>{{titulo}}</h2>
+          <h4><i class="bi bi-geo-alt"></i>{{ciudad}}</h4>
          </div>
          
       </div>

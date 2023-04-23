@@ -7,15 +7,24 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre mí</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body input-group">
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+          
+          <div class="modal-body input-group">
             
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <textarea class="form-control" aria-label="With textarea" formControlName="aboutMe" [class.border-danger]="DescripcionInvalid"></textarea>
             
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">Guardar cambios</button>
-        </div>
+          </div>
+          
+          <div *ngIf="!Descripcion?.valid && Descripcion?.touched" class="error ms-3">
+            Debe ingresar algún texto de presentación.
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
+          </div>
+          
+        </form>
       </div>
     </div>
   </div>

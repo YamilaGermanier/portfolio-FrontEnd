@@ -1,9 +1,12 @@
 {
-    "nombre": "Yamila",
-    "apellido": "Germanier",
+    "nombre": " Yamila",
+    "apellido": " Germanier",
+    "mensaje": "¡Hola! Soy ",
     "titulo": "Desarrolladora Web Full Stack Junior",
     "ciudad": "Concepción del Uruguay, E.R.",
-    "sobre mi":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias autem, nisi esse accusantium eum consequatur iste laudantium vel sed architecto, aliquam recusandae numquam soluta dolores, ea laborum asperiores deleniti! Tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia provident sapiente sed obcaecati consequuntur, libero ipsum error laudantium perferendis aliquid fugiat quidem iusto eveniet perspiciatis omnis amet magni quas?",
+    "imagenPerfil": "../assets/img/foto_perfil.jpg",
+    "descripcion_perfil":"Foto personal",
+    "sobreMi":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias autem, nisi esse accusantium eum consequatur iste laudantium vel sed architecto, aliquam recusandae numquam soluta dolores, ea laborum asperiores deleniti! Tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum officia provident sapiente sed obcaecati consequuntur, libero ipsum error laudantium perferendis aliquid fugiat quidem iusto eveniet perspiciatis omnis amet magni quas?",
 
     "banner":{
         "url":"../assets/img/banner-03.jpg",
@@ -25,89 +28,89 @@
         }
     ],
 
-    "estudios":[
+    "titulos": [
         {
-            "titulos":[
-                {
-                    "id":1,
-                    "logo-institucion":"../assets/img/Logo-Uader-FCyT",
-                    "nombre-titulo":"Analista de sistemas",
-                    "institucion":"UADER, CyT",
-                    "fecha-egreso":"(En curso)"
-                },
-                {
-                    "id":2,
-                    "logo-institucion":"../assets/img/Logo-Uader-FHAyCS",
-                    "nombre-titulo":"Profesorado en francés",
-                    "institucion":"UADER, FHAyCS",
-                    "fecha-egreso":"(En curso)"
-                },
-                {
-                    "id":3,
-                    "logo-institucion":"../assets/img/Logo-Uader-FHAyCS",
-                    "nombre-titulo":"Traductorado en francés",
-                    "institucion":"UADER, FHAyCS",
-                    "fecha-egreso":"2020"
-                }
-            ]
+            "id": 1,
+            "logoInstitucion":"../assets/img/Logo-Uader-FCyT.jpg",
+            "descripcionLogo": "Logo de UADER, Facultad de Ciencia y tecnología",
+            "nombreTitulo": "Analista de sistemas",
+            "institucion": "UADER, CyT",
+            "fechaEgreso": "(En curso)"
         },
-
         {
-            "capacitaciones": [
-                {
-                    "id":1,
-                    "fecha de expedision":"2022",
-                    "nombre-capacitacion":"Formación de expertos en ciencia de datos",
-                    "institucion":"Dirección de Producción de la Municipalidad de Concepción del Uruguay"
-                },
-                {
-                    "id":2,
-                    "fecha de expedision":"2022",
-                    "nombre-capacitacion":"#SéProgramar",
-                    "institucion":"Plan Nacional #ArgentinaPrograma"
-                },
-                {
-                    "id":3,
-                    "fecha de expedision":"2022",
-                    "nombre-capacitacion":"Rompiendo estereotipos: programación inclusiva para mujeres y diversidades",
-                    "institucion":"Dirección de Producción de la Municipalidad de Concepción del Uruguay, UADER CyT."
-                },
-                {
-                    "id":4,
-                    "fecha de expedision":"2021",
-                    "nombre-capacitacion":"Diseño Gráfico y de páginas web",
-                    "institucion":"Educación para jóvenes y adultos, CGE."
-                }
-            ]
+            "id": 2,
+            "logoInstitucion":"../assets/img/Logo-Uader-FHAyCS.png",
+            "descripcionLogo": "Logo de UADER, Facultad de Humanidades, Artes y Ciencias Sociales",
+            "nombreTitulo": "Profesorado en francés",
+            "institucion": "UADER, FHAyCS",
+            "fechaEgreso": "(En curso)"
+        },
+        {
+            "id": 3,
+            "logoInstitucion":"../assets/img/Logo-Uader-FHAyCS.png",
+            "descripcionLogo": "Logo de UADER, Facultad de Humanidades, Artes y Ciencias Sociales",
+            "nombreTitulo": "Traductorado en francés",
+            "institucion": "UADER, FHAyCS",
+            "fechaEgreso": "2020"
         }
-
-
+    ],
+    "capacitaciones": [
+        {
+            "id": 1,
+            "fechaExpedision": "2022",
+            "nombre": "Formación de expertos en ciencia de datos",
+            "institucion": "Dirección de Producción de la Municipalidad de Concepción del Uruguay"
+        },
+        {
+            "id": 2,
+            "fechaExpedision": "2022",
+            "nombre": "#SéProgramar",
+            "institucion": "Plan Nacional #ArgentinaPrograma"
+        },
+        {
+            "id": 3,
+            "fechaExpedision": "2022",
+            "nombre": "Rompiendo estereotipos: programación inclusiva para mujeres y diversidades",
+            "institucion": "Dirección de Producción de la Municipalidad de Concepción del Uruguay, UADER CyT."
+        },
+        {
+            "id": 4,
+            "fechaExpedision": "2021",
+            "nombre": "Diseño Gráfico y de páginas web",
+            "institucion": "Educación para jóvenes y adultos, CGE."
+        }
     ],
 
     "habilidades": [
         {
             "id": 1,
-            "tecnología":"HTML 5",
-            "porcentaje":70
+            "nombre":"HTML 5",
+            "porcentaje":70,
+            "color": "rgb(199, 0, 97)"
         },
         {
             "id": 2,
-            "tecnología":"CSS 3",
-            "porcentaje":40
+            "nombre":"CSS 3",
+            "porcentaje":40,
+            "color": "rgb(52, 152, 219)"
         },
         {
             "id": 3,
-            "tecnología":"JavaScript",
-            "porcentaje":25
+            "nombre":"JavaScript",
+            "porcentaje":25,
+            "color": "rgb(204, 171, 41)"
         },
         {
             "id": 4,
-            "tecnología":"Bootstrap",
-            "porcentaje":30
+            "nombre":"Bootstrap",
+            "porcentaje":30,
+            "color": "#183691"
         },
         {
             "id": 5,
-            "tecnología":15
+            "nombre":"Git",
+            "porcentaje":15,
+            "color": "#D35400"
         }
     ],
 
@@ -115,8 +118,8 @@
         {
             "id":1,
             "imagen": "../assets/img/calculator.jpg",
-            "nombre-proyecto":"Proyecto 1",
-            "link-repositorio":"https://github.com/YamilaGermanier/Proyecto---Calculadora-JS.git"
+            "nombre":"Proyecto 1",
+            "url":"https://github.com/YamilaGermanier/Proyecto---Calculadora-JS.git"
         }
     ]
 

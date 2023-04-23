@@ -5,35 +5,50 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Perfil</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-  
-        <div class="modal-body">
 
+        <form [formGroup]="form"  (ngSubmit)="onEnviar($event)">
+
+          
+          <div class="modal-body">
+            
             <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
-                <input type="file" class="form-control" id="inputGroupFile01">
-              </div>
-  
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre completo">
+              <label class="input-group-text" for="inputGroupFile01">Subir Foto</label>
+              <input type="file" class="form-control" id="inputGroupFile01" formControlName="foto" [class.border-danger]="FotoInvalid">
+            </div>
+            <div *ngIf="Foto?.errors && Foto?.touched" class="error">
+              Debe ingresar una foto de perfil.
+            </div>
+            
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre completo" formControlName="nombre"  [class.border-danger]="NombreInvalid">
+            </div>
+            <div *ngIf="Nombre?.errors && Nombre?.touched" class="error">
+              Debe ingresar su nombre completo.
+            </div>
+            
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Título</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título profesional" formControlName="titulo"  [class.border-danger]="TituloInvalid">
+            </div>
+            <div *ngIf="Titulo?.errors && Titulo?.touched" class="error">
+              Debe ingresar su título o profesión.
+            </div>
+            
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Ubicación</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ubicación" formControlName="ubicacion"  [class.border-danger]="UbicacionInvalid">
+            </div>
+            <div *ngIf="Ubicacion?.errors && Ubicacion?.touched" class="error">
+              Debe ingresar su ubicación.
+            </div>
+            
           </div>
-  
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Título</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título profesional">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
           </div>
-
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Ubicación</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ubicación">
-          </div>
-  
-  
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-success">Guardar cambios</button>
-        </div>
+        </form>
       </div>
     </div>
   </div>

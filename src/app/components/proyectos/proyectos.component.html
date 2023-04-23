@@ -9,16 +9,16 @@
       </button>
     </div>
     <!-- galería de proyectos -->
-    <div class="container text-center proyectos-contenedor">
+    <div class="container text-center proyectos-contenedor" *ngFor="let proyecto of proyectos">
         <div class="row">
           <!-- Proyecto 1 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
               <img src="./assets/img/calculator.jpg" alt="Proyecto 1">
               <div class="overlay">
-                <p> Proyecto 1</p>
+                <p> {{proyecto.nombre}} </p>
                 <div class="iconos-contenedor d-flex justify-content-center">
-                  <a href="https://github.com/YamilaGermanier/Proyecto---Calculadora-JS.git" target="_blank" rel="noopener noreferrer">
+                  <a [href]="proyecto.url" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-github"></i>
                   </a>
                 </div>

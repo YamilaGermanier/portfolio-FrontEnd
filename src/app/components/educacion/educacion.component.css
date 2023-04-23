@@ -14,7 +14,7 @@
     background-color: antiquewhite;
 }
 
-.card-body {
+ .card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
