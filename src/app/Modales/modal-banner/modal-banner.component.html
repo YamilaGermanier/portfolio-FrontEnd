@@ -13,10 +13,12 @@
             
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
-              <input type="file" class="form-control" id="inputGroupFile01" formControlName="banner">
+              <input type="file" class="form-control" id="inputGroupFile01" formControlName="banner" [class.border-danger]="BannerInvalid">
             </div>
-            <div *ngIf="Banner?.errors && Banner?.touched" class="error">
-              Debe ingresar una imagen para el banner.
+            <div *ngIf="Banner?.errors  && Banner?.touched">
+              <p *ngIf="Banner?.hasError('required') && Banner?.touched" class="error">
+                Debe ingresar una imagen para el banner.
+              </p>
             </div>
 
           </div>

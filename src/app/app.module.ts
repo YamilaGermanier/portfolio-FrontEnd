@@ -7,7 +7,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { LoginComponent } from './components/login/login.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { SectionHeroComponent } from './components/section-hero/section-hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -31,7 +30,6 @@ import { ModalProyectoComponent } from './Modales/modal-proyecto/modal-proyecto.
   declarations: [
     AppComponent,
     NavbarComponent,
-    LoginComponent,
     BannerComponent,
     SectionHeroComponent,
     AboutMeComponent,

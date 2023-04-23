@@ -1,4 +1,4 @@
- <!-- Button modal MÁS EXPERIENCIA-->
+ <!-- AGREGAR EXPERIENCIA-->
  <div class="modal fade" id="masExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -14,29 +14,30 @@
         
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Inicio</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [class.border-red]="InicioInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [class.border-danger]="InicioInvalid">
             </div>
-            <div *ngIf="Inicio?.errors?.['required']">
-              <p class="error">
+            <div *ngIf="Inicio?.errors  && Inicio?.touched">
+              <p *ngIf="Inicio?.hasError('required')" class="error">
                 Debe ingresar una fecha de inicio.
               </p>
             </div>
+            
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Fin</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [class.border-red]="FinInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [class.border-danger]="FinInvalid">
             </div>
-            <div *ngIf="Fin?.errors?.['required']">
-              <p class="error">
+            <div *ngIf="Fin?.errors  && Fin?.touched">
+              <p *ngIf="Fin?.hasError('required')" class="error">
                 Debe ingresar una fecha de fin del trabajo.
               </p>
             </div>
 
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Puesto</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [class.border-red]="PuestoInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [class.border-danger]="PuestoInvalid">
             </div>
-            <div *ngIf="Puesto?.errors?.['required']">
-              <p class="error">
+            <div *ngIf="Puesto?.errors  && Puesto?.touched">
+              <p *ngIf="Puesto?.hasError('required')" class="error">
                 Debe ingresar el nombre del puesto o cargo.
               </p>
             </div>
@@ -44,15 +45,15 @@
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                placeholder="Descripción del puesto o cargo" formControlName="descripcion" [class.border-red]="DescripcionInvalid"></textarea>
+                placeholder="Descripción del puesto o cargo" formControlName="descripcion" [class.border-danger]="DescripcionInvalid"></textarea>
             </div>
-            <div *ngIf="Descripcion?.errors?.['required']">
-              <p class="error">
+            <div *ngIf="Descripcion?.errors  && Descripcion?.touched">
+              <p *ngIf="Descripcion?.hasError('required')" class="error">
                 Debe ingresar una descripción del trabajo.
               </p>
             </div>
-            <div *ngIf="Descripcion?.errors?.['minlength']">
-              <p class="error">
+            <div *ngIf="Descripcion?.errors  && Descripcion?.touched">
+              <p *ngIf="Descripcion?.hasError('minlength')" class="error">
                 La descripción debe tener al menos 50 caracteres.
               </p>
             </div>
@@ -69,8 +70,11 @@
       </div>
     </div>
   </div>
+
+
+
   
-   <!-- Button modal EDITAR EXP-->
+   <!-- modal EDITAR EXP-->
    <div class="modal fade" id="editExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -78,29 +82,67 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Editar experiencia</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          
-  
-          <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label">Año/s</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tiempo en el que trabajó">
+
+        <!-- Formulario editar -->
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+          <div class="modal-body">
+            
+            
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Inicio</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [class.border-danger]="InicioInvalid">
+            </div>
+            <div *ngIf="Inicio?.errors  && Inicio?.touched">
+              <p *ngIf="Inicio?.hasError('required')" class="error">
+                Debe ingresar una fecha de inicio.
+              </p>
+            </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Fin</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [class.border-danger]="FinInvalid">
+            </div>
+            <div *ngIf="Fin?.errors  && Fin?.touched">
+              <p *ngIf="Fin?.hasError('required')" class="error">
+                Debe ingresar una fecha de fin del trabajo.
+              </p>
+            </div>
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Puesto</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [class.border-danger]="PuestoInvalid">
+            </div>
+            <div *ngIf="Puesto?.errors  && Puesto?.touched">
+              <p *ngIf="Puesto?.hasError('required')" class="error">
+                Debe ingresar el nombre del puesto o cargo.
+              </p>
+            </div>
+            
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                placeholder="Descripción del puesto o cargo" formControlName="descripcion" [class.border-danger]="DescripcionInvalid"></textarea>
+            </div>
+            <div *ngIf="Descripcion?.errors  && Descripcion?.touched">
+              <p *ngIf="Descripcion?.hasError('required')" class="error">
+                Debe ingresar una descripción del trabajo.
+              </p>
+            </div>
+            <div *ngIf="Descripcion?.errors  && Descripcion?.touched">
+              <p *ngIf="Descripcion?.hasError('minlength')" class="error">
+                La descripción debe tener al menos 50 caracteres.
+              </p>
+            </div>
+            
+            
           </div>
-          <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Título</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título del puesto o cargo">
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
           </div>
-  
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Descipción</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripción del puesto o cargo"></textarea>
-          </div>
-  
-  
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-success">Guardar cambios</button>
-        </div>
+
+        </form>
+
       </div>
     </div>
   </div>
@@ -119,7 +161,7 @@
   
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="submit" class="btn btn-danger">Eliminar</button>
         </div>
       </div>
     </div>

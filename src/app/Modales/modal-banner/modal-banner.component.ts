@@ -24,7 +24,7 @@ get Banner(){
 
 // método validador
 get BannerInvalid(){
-  return this.Banner?.touched && this.Banner?.valid;
+  return this.Banner?.touched && !this.Banner?.valid;
 }
 
 

@@ -15,32 +15,40 @@
               <label class="input-group-text" for="inputGroupFile01">Subir Foto</label>
               <input type="file" class="form-control" id="inputGroupFile01" formControlName="foto" [class.border-danger]="FotoInvalid">
             </div>
-            <div *ngIf="Foto?.errors && Foto?.touched" class="error">
-              Debe ingresar una foto de perfil.
+            <div *ngIf="Foto?.errors &&Foto?.touched">
+              <p *ngIf="Foto?.hasError('required')" class="error">
+                Debe ingresar una foto de perfil.
+              </p>
             </div>
             
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre completo" formControlName="nombre"  [class.border-danger]="NombreInvalid">
             </div>
-            <div *ngIf="Nombre?.errors && Nombre?.touched" class="error">
-              Debe ingresar su nombre completo.
+            <div *ngIf="Nombre?.errors && Nombre?.touched">
+              <p *ngIf="Nombre?.hasError('required')" class="error">
+                Debe ingresar su nombre completo.
+              </p>
             </div>
             
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Título</label>
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título profesional" formControlName="titulo"  [class.border-danger]="TituloInvalid">
             </div>
-            <div *ngIf="Titulo?.errors && Titulo?.touched" class="error">
-              Debe ingresar su título o profesión.
+            <div *ngIf="Titulo?.errors && Titulo?.touched">
+              <p *ngIf="Titulo?.hasError('required')" class="error">
+                Debe ingresar su título o profesión.
+              </p>
             </div>
             
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Ubicación</label>
               <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ubicación" formControlName="ubicacion"  [class.border-danger]="UbicacionInvalid">
             </div>
-            <div *ngIf="Ubicacion?.errors && Ubicacion?.touched" class="error">
-              Debe ingresar su ubicación.
+            <div *ngIf="Ubicacion?.errors && Ubicacion?.touched">
+              <p *ngIf="Ubicacion?.hasError('required')" class="error">
+                Debe ingresar su ubicación.
+              </p>
             </div>
             
           </div>
