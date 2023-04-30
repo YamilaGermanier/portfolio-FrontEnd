@@ -2,21 +2,43 @@
     
     <h1 class="seccion-titulo">Contacto</h1>
 
-    <form>
+    <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
 
       <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escriba su nombre...">
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escriba su nombre..." formControlName="nombre" [class.border-danger]="NombreInvalid">
       </div>
-      <div class="mb-3">
-        <label for="formGroupExampleInput2" class="form-label">E-mail</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ejemplo@ejemplo.com">
+      <div *ngIf="NombreInvalid">
+        <p class="danger">
+          Por favor, ingrese su nombre.
+        </p>
       </div>
 
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba aquí su mensaje"></textarea>
+        <label for="formGroupExampleInput2" class="form-label">E-mail</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ejemplo@ejemplo.com" formControlName="email" [class.border-danger]="EmailInvalid">
       </div>
+      <div *ngIf="Email?.errors  && Email?.touched">    
+        <p *ngIf="Email?.hasError('required')" class="danger">
+            Debe ingresar su email.
+        </p>
+        <p *ngIf="Email?.hasError('email')" class="danger">
+            El formato del email debe ser válido.
+        </p>
+    </div>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escriba aquí su mensaje" formControlName="mensaje" [class.border-danger]="MensajeInvalid"></textarea>
+      </div>
+      <div *ngIf="MensajeInvalid">
+        <p class="danger">
+          Por favor, ingrese el mensaje que desea enviar.
+        </p>
+      </div>
+
       <button type="submit" class="btn btn-dark">Enviar</button>
+
     </form>
+
   </section>
