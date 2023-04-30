@@ -8,24 +8,37 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <div class="modal-body">
-
-        <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de la habilidad">
+      <!-- form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+      
+        <div class="modal-body">
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de la habilidad" formControlName="habilidad" [class.border-danger]="HabilidadInvalid">
+          </div>
+          <div *ngIf="HabilidadInvalid">
+            <p class="error" >
+              Debe ingresar una habilidad.
+            </p>
+          </div>
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Porcentaje</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese el porcentaje" formControlName="porcentaje" [class.border-danger]="PorcentajeInvalid">
+          </div>
+          <div *ngIf="PorcentajeInvalid">
+            <p class="error" >
+              Debe ingresar un porcentaje.
+            </p>
+          </div>
+            
         </div>
-
-        <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label">Porcentaje</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese el porcentaje">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
         </div>
-
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-success">Guardar cambios</button>
-      </div>
+      </form>
     </div>
   </div>
 </div>
@@ -39,6 +52,9 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Editar habilidad</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+        
+      <!-- form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
   
         <div class="modal-body">
 
@@ -46,36 +62,50 @@
             <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="nombre">
           </div>
+          <div *ngIf="HabilidadInvalid">
+            <p class="error" >
+              Debe ingresar una habilidad.
+            </p>
+          </div>
   
           <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Porcentaje</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese el porcentaje">
-          </div>  
-  
-        </div>
+          </div>
+          <div *ngIf="PorcentajeInvalid">
+            <p class="error" >
+              Debe ingresar un porcentaje.
+            </p>
+          </div>
+        
+          </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-success">Guardar cambios</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
         </div>
-      </div>
+
+      </form>
+      
     </div>
   </div>
+</div>
   
-
 
 <!-- Eliminar Habilidad-->
 <div class="modal fade" id="delHab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que quiere eliminar esta habilidad?</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que desea eliminar esta habilidad?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-  
+        
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="submit" class="btn btn-danger">Eliminar</button>
         </div>
-      </div>
+
     </div>
   </div>
+</div>
