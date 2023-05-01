@@ -117,6 +117,8 @@ section {
   text-align: center; 
 }
 
+
+
 /* Sección Experiencia */
 
 .experiencia {
@@ -124,15 +126,33 @@ section {
   height: 45rem;
 }
 
-.accordion {
+/*.accordion {
   margin-top: 50px;
+}*/
+
+.edit-bottoms {
+  background-color: hsl(34, 78%, 91%, 0.70);
+}
+
+.tablaExp {
+  margin-top: 50px;
+  background-color: hsl(34, 78%, 91%);
+  color: #000;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.9);
 }
 
 /* Sección Educación*/
 
-.educación {
-  height: 45rem;
-  padding: 2em;
+.educacion {
+  height: 70rem;
+  padding: 2rem;
 }
 
 .seccion-oscura {
@@ -181,8 +201,8 @@ section {
 /* Sección Habilidades */
 
 .skills {
-  padding-bottom: 30px;
-  height: 45rem;
+  height: fit-content;
+  padding: 8rem;
 }
 
 .progress {
@@ -192,8 +212,6 @@ section {
 }
 
 .skill_tech p {
-  display: flex ;
-  align-items: flex-start;
   color: whitesmoke;
   font-size: 1.2rem;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -207,8 +225,8 @@ section {
 }
 
 .proyectos-recientes{
-  padding: 40px;
-  height: 45rem;
+  padding: 8rem;
+  height: fit-content;
 }
 
 .seccion-descripcion {
@@ -262,7 +280,7 @@ section {
 }
 
 .overlay i {
-  color: black;
+  color: rgb(234, 234, 234);
   font-size: 60px;
   margin: 10px;
 }
@@ -322,6 +340,21 @@ form {
   font-family:'Tangerine', cursive;
   font-size: 25px;
 }
+
+
+/* Modales de edición */
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (min-width: 992px){
   .card-deck{

@@ -98,6 +98,15 @@
 <!-- Sobre mí -->
     <section class="sobre-mi seccion-oscura" id="Sobre-mí">
         <div class="contenedor">
+
+          <div class="d-flex justify-content-end mt-3">
+            <!-- Button modal EDITAR -->
+            <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#editarSobreMi">
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </div>
+
+
           <h2 class="seccion-titulo">Conoce a Yamila Germanier</h2>
           <p class="seccion-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices risus congue, viverra ante et, blandit nisl. Maecenas sit amet velit et nisi malesuada ultricies non nec ex. Suspendisse suscipit consectetur odio ac rhoncus. Donec eget diam nec ex posuere pretium. Vestibulum metus quam, pretium a ante vitae, posuere vulputate leo. Donec tincidunt pretium malesuada. Donec vel mauris dolor. Etiam condimentum quam ac lorem porta, non aliquam lectus pulvinar. Etiam volutpat quam nec accumsan imperdiet. Nunc et purus a odio pulvinar pellentesque ac vitae erat. Quisque non posuere turpis, vitae accumsan lacus.</p>
         </div>
@@ -108,77 +117,198 @@
 <!-- Sección Experiencia-->
 
 <section class="experiencia seccion-color" id="Experiencia">
-  <h1 class="seccion-titulo" >Experiencia</h1>
 
-  <div class="accordion" id="accordionPanelsStayOpenExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-          2017 - 2023  <strong>Traductora freelance </strong>
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-        <div class="accordion-body">
-          He trabajado con clientes particulares en la traducción de documentos de diversa índole. Esta experiencia me permitió fortalecer la seriedad y versatilidad ante las necesidades de cada cliente.
-        </div>
-      </div>
+
+  <div class="d-flex ">
+    <!-- Button modal MÁS EXPERIENCIA -->
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#masExp">
+      <i class="bi bi-plus-square-fill"></i>
+    </button>
+  </div>
+  
+
+  <h1 class="seccion-titulo justify-content-center" >Experiencia</h1>
+
+<div class="container-fluid tablaExp ">
+  
+  <div class="row my-5">
+
+    <div class="col-md-2">
+      2020 - 2023
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-          2021 - 2023  <strong>Profesora de Francés </strong>
-        </button>
-      </h2>
-      <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-        <div class="accordion-body">
-          Actualmente me desempeño como docente en el Colegio “Justo José de Urquiza” y la EET Nº1 “Ana Urquiza de Victorica”. Esta experiencia fortaleció mis habilidades de comunicación, para hablar de forma clara y concisa.
-        </div>
-      </div>
+    <div class="col-md-3">
+      Traductora freelance
+    </div>
+    <div class="col-md-5">
+      He trabajado con clientes particulares en la traducción de documentos de diversa índole. Esta experiencia me permitió fortalecer la seriedad y versatilidad ante las necesidades de cada cliente.
+    </div>
+    <div class="col-md-2">
+
+      <ul class="d-flex align-self-end me-5">
+        <ol>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editExp">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+        </ol>
+        <ol>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#delExp">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </ol>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="row my-5">
+
+    <div class="col-md-2">
+
+      2021 - 2023
+    </div>
+    <div class="col-md-3">
+      Profesora de Francés
+    </div>
+    <div class="col-md-5">
+      Actualmente me desempeño como docente en el Colegio “Justo José de Urquiza” y la EET Nº1 “Ana Urquiza de Victorica”. Esta experiencia fortaleció mis habilidades de comunicación, para hablar de forma clara y concisa.
+    </div>
+    <div class="col-md-2">
+
+      <ul class="d-flex align-self-end me-5">
+        <ol>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editExp">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+        </ol>
+        <ol>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#delExp">
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </ol>
+      </ul>
+
     </div>
   </div>
+  
+</div>
 
 </section>
 
 
+
+
+
+
+
 <!-- Sección Educación -->
 
-  <section class="educación seccion-oscura" id="Educación">
+  <section class="educacion seccion-oscura" id="Educación">
+
                 
      <h1 class="seccion-titulo">Educación</h1>
 
-      <h2>Formación Académica</h2>      
-      <div class="card-deck">
-        <div class="card">
-          <div class="card-body">
-            <img width="100" src="img/294969897_703954617343152_4026754005575901036_n.jpg" alt="Lodo Uader CyT">
+
+     <div class="d-flex align-self-end me-5">
+      <!-- Button modal MÁS formación -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addAc">
+        <i class="bi bi-plus-square-fill"></i>
+      </button>
+    </div>
+
+    <h2>Formación Académica</h2>
+    <div class="container-fluid">
+      <div class="row">
+    
+        <div class="card-deck">
+          <div class="card col-md-3">
+
+            <div class="card-body">
+              <img width="100" src="img/294969897_703954617343152_4026754005575901036_n.jpg" alt="Lodo Uader CyT">
               <h4 class="card-title">Analista de sistemas</h4>
               <p class="card-text">(En curso) - UADER, CyT</p>
+            </div>
           </div>
-        </div>
-         <div class="card">
+          <div class="col-md-1 d-flex">
+            <ul>
+              <ol>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+              </ol>
+              <ol>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </ol>
+            </ul>
+          </div>
+
+          <div class="card col-md-3">
             <div class="card-body">
               <img width="100" src="img/278178143_396915629103661_4079916548397230_n.png" alt="Lodo Uader CyT">
               <h4 class="card-title">Profesorado en francés</h4>
               <p class="card-text"> (En curso) - UADER, FHAyCS</p>
             </div>
           </div>
-          <div class="card">
+          <div class="col-md-1 ms-0">
+            <ul>
+              <ol>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+              </ol>
+              <ol>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </ol>
+            </ul>
+          </div>
+
+          <div class="card col-md-3">
             <div class="card-body">
               <img width="100" src="img/278178143_396915629103661_4079916548397230_n.png" alt="Lodo Uader CyT">
               <h4 class="card-title">Traductora de francés</h4>
               <p class="card-text">2020 - Promedio general 8,63 - UADER, FHAYCS</p>
             </div>
           </div>
+          <div class="col-md-1 ms-0">
+            <ul>
+              <ol>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+              </ol>
+              <ol>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </ol>
+            </ul>
+          </div>
+        </div>
+    
       </div>
+    </div>
+
+
+    <div class="d-flex align-self-end me-5 mt-5">
+      <!-- Button modal MÁS cursos -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addCap">
+        <i class="bi bi-plus-square-fill"></i>
+      </button>
+    </div>
 
       <h2>Cursos y Capacitaciones</h2>
 
       <table class="table table-success table-striped">
         <thead>
           <tr>
-            <th scope="col">Fecha de Expedición</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Institución</th>
+            <th scope="col-3">Fecha de Expedición</th>
+            <th scope="col-3">Nombre</th>
+            <th scope="col-3">Institución</th>
+            <th scope="col-3"> </th>
           </tr>
         </thead>
         <tbody>
@@ -186,21 +316,61 @@
             <td>2022</td>
             <td>"Formación de expertos en ciencia de datos"</td>
             <td>Dirección de Producción de la Municipalidad de Concepción del Uruguay</td>
+            <td> 
+              <div class="cap-buttuns">     
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+              <i class="bi bi-pencil-square"></i>
+              </button>
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div> 
+            </td>
           </tr>
           <tr>
             <td>2022</td>
             <td>#SéProgramar</td>
             <td>Primera etapa del Plan Argentina Programa.</td>
+            <td> 
+              <div class="cap-buttuns">     
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+              <i class="bi bi-pencil-square"></i>
+              </button>
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div> 
+            </td>
           </tr>
           <tr>
             <td>Junio 2022</td>
             <td>"Rompiendo estereotipos: programación inclusiva para mujeres y diversidades"</td>
             <td>Dirección de Producción de la Municipalidad de Concepción del Uruguay, UADER CyT.</td>
+            <td> 
+              <div class="cap-buttuns">     
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+              <i class="bi bi-pencil-square"></i>
+              </button>
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div> 
+            </td>
           </tr>
           <tr>
             <td>Agosto 2021</td>
             <td>Diseño Gráfico y de páginas web</td>
             <td>Educación para jóvenes y adultos, CGE.</td>
+            <td> 
+              <div class="cap-buttuns">     
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+              <i class="bi bi-pencil-square"></i>
+              </button>
+              <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                <i class="bi bi-trash-fill"></i>
+              </button>
+            </div> 
+            </td>
           </tr>
         </tbody>
       </table>
@@ -210,80 +380,213 @@
 <!-- Sección Habilidades -->
   <section class="skills seccion-color" id="Skills">
     
-    <h1 class="seccion-titulo">Conocimientos</h1>
+    <h1 class="seccion-titulo">Habilidades</h1>
 
-    
-    <div class="skill_tech d-flex flex-row align-items-center ">
-        <p class="d-inline pe-3 mb-0"> HTML 5 </p>
-        <div class="progress" style="margin-left: 20px ;">
-          <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" style="width:70%; background-color: rgb(199, 0, 97);">
-            <span>70%</span> 
+    <div class="d-flex align-self-end me-5">
+      <!-- Button modal MÁS HABILIDADES -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addAc">
+        <i class="bi bi-plus-square-fill"></i>
+      </button>
+    </div>
+
+    <div class="container-fluid d-flex flex-column align-items-center">
+
+      <div class="row">
+
+        <div class="skill_tech col-md-6">
+          <p class="d-inline pe-3 mb-0">HTML 5</p>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="col-2 pe-0">
+              <div class="cap-buttuns">
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="progress">
+                <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"
+                  style="width:70%; background-color: rgb(199, 0, 97);">
+                  <span class="d-flex justify-content-center align-items-center h-100 w-100">70%</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div> 
 
-      <div class="skill_tech d-flex flex-row align-items-center ">
-        <p class="d-inline pe-3 mb-0"> CSS 3 </p>   
-     <div class="progress" style="margin-left: 40px;">
-        <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40" style="width:40%; background-color: rgb(52, 152, 219); border-color: black; border-radius: 3px;">
-          <span>40%</span> 
-        </div>
       </div>
+
+      <div class="row">
+
+        <div class="skill_tech col-md-6">
+          <p class="d-inline pe-3 mb-0">CSS 3</p>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="col-2 pe-0">
+              <div class="cap-buttuns">
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="progress">
+                <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"
+                  style="width:40%; background-color:  rgb(52, 152, 219);">
+                  <span class="d-flex justify-content-center align-items-center h-100 w-100">40%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="skill_tech col-md-6">
+          <p class="d-inline pe-3 mb-0">JavaScript</p>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="col-2 pe-0">
+              <div class="cap-buttuns">
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="progress">
+                <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"
+                  style="width:25%; background-color:  rgb(204, 171, 41);">
+                  <span class="d-flex justify-content-center align-items-center h-100 w-100">25%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="skill_tech col-md-6">
+          <p class="d-inline pe-3 mb-0">Bootstrap</p>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="col-2 pe-0">
+              <div class="cap-buttuns">
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="progress">
+                <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"
+                  style="width:30%; background-color:  #183691">
+                  <span class="d-flex justify-content-center align-items-center h-100 w-100">30%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="skill_tech col-md-6">
+          <p class="d-inline pe-3 mb-0">Git</p>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="col-2 pe-0">
+              <div class="cap-buttuns">
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editAc">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delAc">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="progress">
+                <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="40"
+                  style="width:15%; background-color:  #D35400;">
+                  <span class="d-flex justify-content-center align-items-center h-100 w-100">15%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="skill_tech d-flex flex-row align-items-center ">
-      <p class="d-inline pe-3 mb-0"> JavaScript </p>  
-      <div class="progress" style="margin-left: 5px;">
-        <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" style="width:25%; background-color: rgb(204, 171, 41);">
-          <span>25%</span> 
-        </div>
-      </div>
-    </div>
-
-    <div class="skill_tech d-flex flex-row align-items-center ">
-      <p class="d-inline pe-3 mb-0"> Bootstrap </p>  
-      <div class="progress" style="margin-left: 2px;">
-        <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" style="width:20%; background-color: #183691;">
-          <span>20</span> 
-        </div>
-      </div>
-    </div>
-
-    <div class="skill_tech d-flex flex-row align-items-center ">
-      <p class="d-inline pe-3 mb-0"> Git </p>  
-      <div class="progress" style="margin-left: 61px;">
-        <div class="progress-bar" role="progress-bar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="15" style="width:15%; background-color: #D35400;">
-          <span>15%</span> 
-        </div>
-      </div>
-    </div>
   </section>
+
+
+
+
 
 
 
 <!-- Sección Proyectos --> 
   <section class="proyectos-recientes seccion-oscura d-flex flex-column" id="Proyectos">
-    <h1 class="seccion-titulo">Mis proyectos recientes</h2>
+    <h1 class="seccion-titulo">Mis proyectos recientes</h1>
     <h3 class="seccion-descripcion">Estos son algunos proyectos que he creado recientemente...</h3>
+    <div class="d-flex align-self-end me-5">
+      <!-- Button modal MÁS formación -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPro">
+        <i class="bi bi-plus-square-fill"></i>
+      </button>
+    </div>
     <!-- galería de proyectos -->
     <div class="container text-center proyectos-contenedor">
         <div class="row">
           <!-- Proyecto 1 -->
           <div class="col-12 col-md-6 col-lg-4">
             <div class="proyecto">
-              <img src="img/calculadora-online.jpg" alt="Proyecto 1">
+              <img src="img/calculator.jpg" alt="Proyecto 1">
               <div class="overlay">
                 <p> Proyecto 1</p>
-                <div class="iconos-contenedor">
+                <div class="iconos-contenedor d-flex justify-content-center">
                   <a href="https://github.com/YamilaGermanier/Proyecto---Calculadora-JS.git" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-github"></i>
                   </a>
                 </div>
               </div>
+              <div class="cap-buttuns">     
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editPro">
+                <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delPro">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
             </div>
           </div>
+        </div>
+    </div>
   </section>   
 
+
+
+
+  
 <!-- Sección Contacto -->
 
   <section class="contacto seccion-color" id="Contacto">
@@ -335,7 +638,9 @@
 
 
 
-  <!-- Modal -->
+  <!-- MODALES -->
+
+<!-- modal iNGRESAR -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -363,8 +668,318 @@
   </div>
 </div>
 
+ <!-- Button modal EDITAR -->
+<!-- Modal -->
+<div class="modal fade" id="editarSobreMi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+
+ <!-- Button modal MÁS EXPERIENCIA-->
+<div class="modal fade" id="masExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Año/s</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tiempo en el que trabajó">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Título</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título del puesto o cargo">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Descipción</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripción del puesto o cargo"></textarea>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- Button modal EDITAR EXP-->
+ <div class="modal fade" id="editExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar experiencia</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Año/s</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Tiempo en el que trabajó">
+        </div>
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Título</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título del puesto o cargo">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Descipción</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Descripción del puesto o cargo"></textarea>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Button modal ELIMNAR EXP-->
+
+ <div class="modal fade" id="delExp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que quiere eliminar esta experiencia?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal AGREGAR FORMACIÓN ACADÉMICA-->
+
+<div class="modal fade" id="addAc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar título</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+       
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Título</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Año egreso</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese año de egreso">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Institución</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Institutción que otorga el título" >
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- Button modal EDITAR FORMACIÓN ACADMÉMICA-->
+ <div class="modal fade" id="editAc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar título</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+       
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Título</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Año egreso</label>
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese año de egreso">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Institución</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Institutción que otorga el título" >
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- Button modal ELIMNAR FORMACIÓN ACADÉMICA-->
+
+ <div class="modal fade" id="delAc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que quiere eliminar esta título?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button modal AGREGAR PROYECTO-->
+
+<div class="modal fade" id="addPro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Título del proyecto</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Link</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2"
+            placeholder="Ingrese el link al repositorio o dirección web">
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button modal EDITAR PROYECTOS-->
+<div class="modal fade" id="editPro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Proyecto</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
+          <input type="file" class="form-control" id="inputGroupFile01">
+        </div>
+
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Título del proyecto</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título">
+        </div>
+  
+        <div class="mb-3">
+          <label for="formGroupExampleInput2" class="form-label">Link</label>
+          <input type="text" class="form-control" id="formGroupExampleInput2"
+            placeholder="Ingrese el link al repositorio o dirección web">
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-success">Guardar cambios</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button modal ELIMNAR Proyecto-->
+
+<div class="modal fade" id="delPro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que quiere eliminar este proyecto?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
