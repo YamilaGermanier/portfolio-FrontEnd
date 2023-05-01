@@ -4,25 +4,25 @@
     <h1 class="seccion-titulo">Estudios</h1>
 
 
+    <!-- Button modal MÁS formación -->
     <div class="d-flex align-self-end me-5">
-        <!-- Button modal MÁS formación -->
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addAc">
             <i class="bi bi-plus-square-fill"></i>
         </button>
     </div>
 
     <h2>Títulos académicos</h2>
-    <div class="container-fluid" >
+    <div class="container-fluid " >
 
         <div class="row justify-content-center">
 
         
-            <div class="row card-deck" >
+            <div class="row card-deck d-flex justify-content-center" >
 
-                <div class="col card" *ngFor="let titulo of titulos">
+                <div class="col-md-3 card"  *ngFor="let titulo of titulos">
                     <div class="card-body">
                         <img [src]="titulo.logoInstitucion" [alt]="titulo.descripcionLogo">
-                        <h4 class="card-title">{{titulo.nombreTitulo}}</h4>
+                        <h4 class="card-title text-center">{{titulo.nombreTitulo}}</h4>
                         <p class="card-text">{{titulo.institucion}}</p>
                         <p>{{titulo.fechaEgreso}}</p>
                     </div>
@@ -46,55 +46,6 @@
         </div>   
           
     </div>
-                <!--div class="card col-3">
-                    <div class="card-body">
-                        <img width="100" src="./assets/img/Logo-Uader-FHAyCS.png" alt="Lodo Uader - FHAyCS">
-                        <h4 class="card-title">Profesorado en francés</h4>
-                        <p class="card-text">UADER, FHAyCS</p>
-                        <p>(En curso) </p>
-                    </div>
-
-                    <ul class="list d-flex align-self-end">
-                        <ol>
-                            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal"
-                                data-bs-target="#editAc">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                        </ol>
-                        <ol>
-                            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal"
-                                data-bs-target="#delAc">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </ol>
-                    </ul>
-                </div>
-
-
-                <div class="card col-3">
-                    <div class="card-body">
-                        <img width="100" src="./assets/img/Logo-Uader-FHAyCS.png" alt="Lodo Uader - FHAyCS">
-                        <h4 class="card-title">Traductora de francés</h4>
-                        <p class="card-text">2020 - Promedio general 8,63 - UADER, FHAYCS</p>
-                    </div>
-
-                    <ul class="list d-flex align-self-end">
-                        <ol>
-                            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal"
-                                data-bs-target="#editAc">
-                                <i class="bi bi-pencil-square"></i>
-                            </button>
-                        </ol>
-                        <ol>
-                            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal"
-                                data-bs-target="#delAc">
-                                <i class="bi bi-trash-fill"></i>
-                            </button>
-                        </ol>
-                    </ul>
-                </div-->
-
-
 
     <div class="d-flex align-self-end me-5 mt-5">
         <!-- Button modal MÁS cursos -->
@@ -102,6 +53,8 @@
             <i class="bi bi-plus-square-fill"></i>
         </button>
     </div>
+
+
 
     <h2>Capacitaciones</h2>
 
@@ -134,51 +87,5 @@
     </table>
 
 </section>
-            <!--tr>
-                <td>2022</td>
-                <td>#SéProgramar</td>
-                <td>Plan Nacional #ArgentinaPrograma.</td>
-                <td>
-                    <div class="cap-buttuns">
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editCap">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delCap">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>2022</td>
-                <td>Rompiendo estereotipos: programación inclusiva para mujeres y diversidades</td>
-                <td>Dirección de Producción de la Municipalidad de Concepción del Uruguay, UADER CyT.</td>
-                <td>
-                    <div class="cap-buttuns">
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editCap">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delCap">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>2021</td>
-                <td>Diseño Gráfico y de páginas web</td>
-                <td>Educación para jóvenes y adultos, CGE.</td>
-                <td>
-                    <div class="cap-buttuns">
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editCap">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delCap">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr-->
-
 
 <app-modal-educacion></app-modal-educacion>

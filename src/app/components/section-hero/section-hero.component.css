@@ -13,6 +13,7 @@
 
 .hero h1 {
     font-family: 'Faster One', cursive;
+    font-size: 3vw;
 }
 
 .hero h2 {
@@ -22,7 +23,7 @@
 .hero h4 {
     margin-top: 0.5rem;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2rem;
+    font-size: 1.6vw;
 }
 
 .hero-imagen-desarrollador {
@@ -36,4 +37,74 @@
     position: absolute;
     right: 0.6rem;
     z-index: 1;
+}
+
+
+/*responsive h1*/
+@media (max-width:1200px){
+    .hero h1 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width:900px){
+    .hero h1 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width:768px){
+    .hero h1 {
+        font-size: 8vw;
+    }
+}
+
+@media (max-width:550px){
+    .hero h1 {
+        font-size: 10vw;
+    }
+}
+
+/*responsive h2*/
+@media (max-width:1200px){
+    .hero h2 {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width:900px){
+    .hero h2 {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width:768px){
+    .hero h2 {
+        font-size: 7vw;
+    }
+}
+
+@media (max-width:550px){
+    .hero h2 {
+        font-size: 9vw;
+    }
+}
+
+/*responsive h4*/
+@media (max-width:1200px){
+    .hero h4 {
+        font-size: 2.8vw;
+    }
+}
+
+@media (max-width:768px){
+    .hero h4 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width:550px){
+    .hero h4 {
+        font-size: 7vw;
+    }
 }

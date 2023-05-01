@@ -20,7 +20,7 @@
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 1.8vw;
   }
   
   .redes i:hover {
@@ -31,7 +31,7 @@
     color: white;
     font-weight: bold;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
   }
   
   .navbar li a:hover {
@@ -53,4 +53,37 @@
     right: 0;
     top: 2rem;
     z-index: 1;
+    font-size: 1vw;
+  }
+
+  /* responsive*/
+  @media (max-width: 1440px){
+    .navbar li a {
+      font-size: 2vw;
+    }
+  }
+
+  @media (max-width: 992px){
+    .navbar li a {
+      font-size: 3vw;
+    }
+  }
+
+  @media (max-width: 768px){
+    .navbar li a {
+      font-size: 4vw;
+    }
+  }
+
+  @media (max-width: 550px){
+    .navbar li a {
+      font-size: 5.5vw;
+    }
+  }
+
+  /*login*/
+  @media (max-width: 720px){
+    .btn {
+      font-size: 3vw;
+    }
   }

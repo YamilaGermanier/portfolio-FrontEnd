@@ -8,7 +8,7 @@
     height: fit-content;
   }
   
-  .seccion-descripcion {
+ h3 {
     font-family: 'Times New Roman', Times, serif;
   }
   
@@ -56,6 +56,7 @@
   
   .overlay .iconos-contenedor {
     display: flex;
+    align-items: center;
   }
   
   .overlay i {
@@ -63,3 +64,22 @@
     font-size: 60px;
     margin: 10px;
   }
+
+  /*responsive*/
+@media (max-width: 1200px){
+  .proyectos-recientes h3 {
+    font-size: 3vw;
+  }
+}
+
+@media (max-width: 768px){
+  .proyectos-recientes h3 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 550px){
+  .proyectos-recientes h3 {
+    font-size: 5vw;
+  }
+}

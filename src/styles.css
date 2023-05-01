@@ -29,14 +29,46 @@ section {
 .seccion-titulo {
   font-family: 'Rampart One', cursive;
   color: antiquewhite;
-  padding: 20px;
+  padding: 6vw;
 }
+
+h2 {
+  font-size: 2vw;
+}
+
+h3 {
+  font-size: 1.5vw;
+}
+
+h4 {
+  font-size: 1vw;
+}
+
 
 /*Modales errores*/ 
 .error{
     color:red
-  }
+}
   
-  .border-danger{
-    border-color: red;
+.border-danger{
+  border-color: red;
+}
+
+/*responsive sección-titulo*/
+@media (max-width: 1200px) {
+  .seccion-titulo {
+    font-size: 6vw;
   }
+}
+
+@media (max-width: 768px) {
+  .seccion-titulo{
+    font-size: 8vw;
+  }
+}
+
+@media (max-width: 460px) {
+  .seccion-titulo {
+    font-size: 18vw;
+  }
+}

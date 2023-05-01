@@ -6,6 +6,10 @@
     opacity: 0.8;
 }
 
+.card-title {
+    padding-top: 1.5vw;
+}
+
 .card {
     margin: 10px;
 }
@@ -24,7 +28,6 @@
 
 .card-body img {
     width: 100px;
-
     margin-left: auto;
     margin-right: auto;
     border-radius: 10%;
@@ -33,8 +36,92 @@
 .educación h2 {
     margin-top: 50px;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+}
+
+h4 {
+    font-size: 1.5vw;
 }
 
 .list{
     z-index: 1;
+}
+
+/*responsive h4*/
+@media (max-width:1200px){
+    h4 {
+        font-size: 2.8vw;
+    }
+}
+
+@media (max-width:768px){
+    h4 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width:550px){
+    h4 {
+        font-size: 7vw;
+    }
+}
+
+/*responsive p*/
+@media (max-width:1200px){
+    p {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:768px){
+    p {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width:550px){
+    p {
+        font-size: 5vw;
+    }
+}
+
+/*responsive h2*/
+@media (max-width:1200px){
+    h2 {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width:768px){
+    h2 {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width:550px){
+    h2 {
+        font-size: 7vw;
+    }
+}
+
+/*responsive th td*/
+@media (max-width:1200px){
+    th,
+    td {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:768px){
+    th,
+    td {
+        font-size: 3.5vw;
+    }
+}
+
+@media (max-width:550px){
+    th,
+    td {
+        font-size: 5vw;
+    }
 }

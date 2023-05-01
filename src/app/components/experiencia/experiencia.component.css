@@ -26,3 +26,22 @@
   .container-fluid {
     row-gap: 5px;
   }
+
+  /*responsive*/
+  @media (max-width:1200px){
+    .exp {
+      font-size: 2vw;
+    } 
+  }
+
+  @media (max-width:768px){
+    .exp {
+      font-size: 4vw;
+    } 
+  }
+
+  @media (max-width:550px){
+    .exp {
+      font-size: 6vw;
+    } 
+  }

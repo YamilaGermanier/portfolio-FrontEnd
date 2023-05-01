@@ -11,6 +11,31 @@
   
   .skill_tech p {
     color: whitesmoke;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  /*responsive*/
+  @media (max-width: 1200px){
+    .skill_tech p {
+      font-size: 3vw;
+    }
+  }
+
+  @media (max-width: 900px){
+    .skill_tech p {
+      font-size: 4vw;
+    }
+  }
+
+  @media (max-width: 768px){
+    .skill_tech p {
+      font-size: 5vw;
+    }
+  }
+
+  @media (max-width: 550px){
+    .skill_tech p {
+      font-size: 6vw;
+    }
   }

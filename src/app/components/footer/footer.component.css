@@ -3,5 +3,14 @@
     margin-top: 15px;
     margin-left: 20px;
     font-family:'Tangerine', cursive;
-    font-size: 25px;
+    font-size: 1.5vw;
+  }
+
+  @media (max-width: 768px) {
+    img{
+      width: 20vw;
+    }
+    .branch {
+      font-size:5vw;
+    }
   }
