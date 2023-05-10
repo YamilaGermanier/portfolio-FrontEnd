@@ -13,7 +13,7 @@
             
             <div class="input-group mb-3">
               <label class="input-group-text" for="inputGroupFile01">Subir Foto</label>
-              <input type="file" class="form-control" id="inputGroupFile01" formControlName="foto" [class.border-danger]="FotoInvalid">
+              <input type="file" class="form-control" id="inputGroupFile01" formControlName="foto" [(ngModel)]="imagenPerfil" [class.border-danger]="FotoInvalid">
             </div>
             <div *ngIf="Foto?.errors &&Foto?.touched">
               <p *ngIf="Foto?.hasError('required')" class="error">
@@ -53,7 +53,7 @@
             
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-secondary"(click)="limpiar()">Cancelar</button>
             <button type="submit" class="btn btn-success">Guardar cambios</button>
           </div>
         </form>

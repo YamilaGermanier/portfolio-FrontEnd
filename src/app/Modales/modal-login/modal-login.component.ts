@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Servicios/auth.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-modal-login',
@@ -8,16 +11,17 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class ModalLoginComponent implements OnInit {
  form:FormGroup;
+ email='';
+ password='';
 
- constructor(private formBuilder: FormBuilder) {
+ constructor(private formBuilder: FormBuilder, private auth:AuthService,private route:Router) {
   this.form = this.formBuilder.group({
     email:['', [Validators.required, Validators.email]],
     password:['', [Validators.required, Validators.minLength(8)]],
   })
  }
 
-
- ngOnInit(): void{}
+ngOnInit(): void{}
 
  //Métodos para el formulario
  
@@ -39,17 +43,53 @@ export class ModalLoginComponent implements OnInit {
   return this.Password?.touched && !this.Password?.valid;
  }
 
- onEnviar(event: Event){
+ /*onEnviar(event: Event){
+  this.auth.authenticate(this.email, this.password).subscribe(
+    (response: any) => { },
+    (error) => {
+      this.error = 'Nombre de usuario o contraseña incorrectos.';
+    }
+  );
+}*/
+
+onEnviar(event: Event) {
+  event.preventDefault();
+  const isAuthenticated = this.auth.authenticate(this.form.value);
+  if (isAuthenticated) {
+    this.route.navigate(['/inicio']);
+  } else {
+    this.form.markAllAsTouched;
+  }
+}
+
+}
+
+
+/* onEnviar(event: Event){
 
   event.preventDefault; 
   
   if (this.form.valid){
-    // Llamamos a nuestro servicio para enviar los datos al servidor
-    // También podríamos ejecutar alguna lógica extra
+
     alert("Todo salio bien ¡Enviar formuario!")
+    this.auth.login(this.form.value).subscribe(data=>{
+      this.route.navigate(['']);
+      
+    })
+
   }else{
-    // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
-    this.form.markAllAsTouched(); 
+
+    if(this.form.valid){
+      //llamar servicio a base de datos
+      console.log("Datos tomados");
+      this.auth.login(this.form.value).subscribe(data=>{
+        console.log("data: "+ JSON.stringify(data));
+        this.route.navigate(['/inicio']);
+        localStorage.setItem('auth_token',data.token)
+      })
+    }else{
+      alert("ups algun dato salio mal");
+      this.form.markAllAsTouched;
+    }
   }
- }
-}
+}*/

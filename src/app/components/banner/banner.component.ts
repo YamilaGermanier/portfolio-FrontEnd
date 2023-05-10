@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/Servicios/datos.service';
+import { AuthService } from 'src/app/Servicios/auth.service';
 
 @Component({
   selector: 'app-banner',
@@ -10,7 +11,7 @@ export class BannerComponent implements OnInit {
   //Para traer datos del json
   banner:any;
 
-  constructor(private datos:DatosService) {}
+  constructor(private datos:DatosService, protected auth:AuthService) {}
 
 
 

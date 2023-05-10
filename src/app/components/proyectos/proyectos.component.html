@@ -4,7 +4,7 @@
     <h3>Estos son algunos proyectos que he creado recientemente...</h3>
     <div class="d-flex align-self-end me-5">
       <!-- Button modal MÁS Proyectos -->
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPro">
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPro"  *ngIf="auth.logIn()">
         <i class="bi bi-plus-square-fill"></i>
       </button>
     </div>
@@ -23,7 +23,7 @@
                   </a>
                 </div>
               </div>
-              <div class="cap-buttuns">     
+              <div class="cap-buttuns"  *ngIf="auth.logIn()">     
                 <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editPro">
                 <i class="bi bi-pencil-square"></i>
                 </button>

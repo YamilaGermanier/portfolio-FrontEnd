@@ -54,6 +54,10 @@ export class ModalExperienciaComponent implements OnInit{
     return this.Descripcion?.touched && !this.Descripcion?.valid;
   }
 
+  limpiar(): void {
+    this.form.reset();
+  }
+
   onEnviar(event: Event){
 
     event.preventDefault; 

@@ -51,9 +51,13 @@
         </div>
     </div>
     <!-- Button trigger modal Login -->
-    <button type="button" class="btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#loginModal" routerLink="/loginModal">
-        <i class="fa-solid fa-user"></i>
-    </button>
+    <div>
+        <button type="button" class="btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#loginModal" routerLink="/loginModal">
+            <a *ngIf="!auth.logIn()"><i class="fa-solid fa-user"></i></a>
+            <a href="#" *ngIf="auth.logIn()"><i class="fa-solid fa-user-slash"></i></a>
+        </button>
+    </div>
+
 </nav>
 </div>
 <app-modal-login></app-modal-login>

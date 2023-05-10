@@ -25,6 +25,7 @@ import { ModalEducacionComponent } from './Modales/modal-educacion/modal-educaci
 import { ModalSectionHeroComponent } from './Modales/modal-section-hero/modal-section-hero.component';
 import { ModalHabilidadesComponent } from './Modales/modal-habilidades/modal-habilidades.component';
 import { ModalProyectoComponent } from './Modales/modal-proyecto/modal-proyecto.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ModalProyectoComponent } from './Modales/modal-proyecto/modal-proyecto.
     ModalEducacionComponent,
     ModalSectionHeroComponent,
     ModalHabilidadesComponent,
-    ModalProyectoComponent
+    ModalProyectoComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@
 
 
     <!-- Button modal MÁS formación -->
-    <div class="d-flex align-self-end me-5">
+    <div class="d-flex align-self-end me-5"  *ngIf="auth.logIn()">
         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addAc">
             <i class="bi bi-plus-square-fill"></i>
         </button>
@@ -26,7 +26,7 @@
                         <p class="card-text">{{titulo.institucion}}</p>
                         <p>{{titulo.fechaEgreso}}</p>
                     </div>
-                    <ul class="list d-flex align-self-end">
+                    <ul class="list d-flex align-self-end"  *ngIf="auth.logIn()">
                         <ol>
                             <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal"
                                 data-bs-target="#editAc">
@@ -49,43 +49,58 @@
 
     <div class="d-flex align-self-end me-5 mt-5">
         <!-- Button modal MÁS cursos -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addCap">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addCap"  *ngIf="auth.logIn()">
             <i class="bi bi-plus-square-fill"></i>
         </button>
     </div>
 
 
 
-    <h2>Capacitaciones</h2>
+    <h2>Capacitaciones</h2> <!-- Cambié el diseño de table xq quedaba muy feo y poco responsive-->
 
-    <table class="table table-success table-striped" *ngFor="let capacitacion of capacitaciones">
-        <thead>
-            <tr>
-                <th scope="col">Fecha de Expedición</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Institución</th>
-                <th scope="col">Edición</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{capacitacion.fechaExpedision}}</td>
-                <td>{{capacitacion.nombre}}</td>
-                <td>{{capacitacion.institucion}}</td>
-                <td>
-                    <div class="cap-buttuns">
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editCap">
-                            <i class="bi bi-pencil-square"></i>
-                        </button>
-                        <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delCap">
-                            <i class="bi bi-trash-fill"></i>
-                        </button>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="formato container-fluid">
+        <div class="row">
+            <div class="col-2 text-center">
+            <h2>Fecha</h2>
+            </div>
+            <div class="col-4 text-center">
+            <h2>Nombre de la capacitación</h2>
+            </div>
+            <div class="col-4 text-center">
+            <h2>Institución</h2>
+            </div>
+            <div class="col-2 text-center">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" *ngFor="let capacitacion of capacitaciones">
+        <div class="row">
+          <div class="col-2 text-center">
+            <p>{{capacitacion.fecha}}</p>
+          </div>
+          <div class="col-4 text-center">
+            <p>{{capacitacion.nombre}}</p>
+          </div>
+          <div class="col-4 text-center">
+            <p>{{capacitacion.institucion}}</p>
+          </div>
+          <div class="col-2 text-center"  *ngIf="auth.logIn()">
+            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editCap">
+                <i class="bi bi-pencil-square"></i>
+            </button>
+            <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delCap">
+                <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <hr>
+          </div>
+        </div>
 
+      </div>
+      
 </section>
 
 <app-modal-educacion></app-modal-educacion>

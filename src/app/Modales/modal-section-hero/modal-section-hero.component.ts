@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Persona } from 'src/app/Entidades/persona-entity';
+import { PersonaService } from 'src/app/Servicios/persona.service';
 
 @Component({
   selector: 'app-modal-section-hero',
@@ -7,12 +9,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./modal-section-hero.component.css']
 })
 export class ModalSectionHeroComponent implements OnInit{
+  
   form:FormGroup;
+  imagenPerfil: String=' ' ;
+  mensaje: String='';
+  nombre:String='';
+  apellido:String='';
+  titulo:String='';
+  ubicacion:String='';
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private persoServ:PersonaService) {
     this.form = this.formBuilder.group({
-      foto:['', [Validators.required]],
+      imagenPerfil:['', [Validators.required]],
+      mensaje:['', [Validators.required]],
       nombre:['', [Validators.required]],
+      apellido:['', [Validators.required]],
       titulo:['', [Validators.required]],
       ubicacion:['', [Validators.required]],
     })
@@ -22,7 +33,7 @@ export class ModalSectionHeroComponent implements OnInit{
 
   //Métodos de entrada
   get Foto(){
-    return this.form.get("foto");
+    return this.form.get("imagenPerfil");
   }
 
   get Nombre(){
@@ -55,18 +66,25 @@ export class ModalSectionHeroComponent implements OnInit{
     return this.Ubicacion?.touched && !this.Ubicacion.valid; 
   }
 
+  onEditar():void {
+    const persona = new Persona(this.nombre, this.apellido, this.mensaje, this.titulo, this.ubicacion, this.imagenPerfil);
+    this.persoServ.editar(persona).subscribe(data=>{alert("Los datos se guardaron correctamente!"); window.location.reload();
+  }, err => {alert("Algo falló en la carga, por favor vuelva a intentarlo"); window.location.reload()});
+  }
 
-
+  limpiar(): void {
+    this.form.reset();
+  }
 
    onEnviar(event: Event){
-
     event.preventDefault; 
-    
     if (this.form.valid){
+      this.onEditar();
       // Llamamos a nuestro servicio para enviar los datos al servidor
       // También podríamos ejecutar alguna lógica extra
-      alert("Todo salio bien ¡Enviar formuario!")
+      alert("Todo salio bien ¡Enviar formuario!");
     }else{
+      alert("Algo falló en la carga, por favor vuelva a intentarlo.");
       // Corremos todas las validaciones para que se ejecuten los mensajes de error en el template     
       this.form.markAllAsTouched(); 
     }

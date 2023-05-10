@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/Servicios/datos.service';
+import { AuthService } from 'src/app/Servicios/auth.service';
 
 @Component({
   selector: 'app-about-me',
@@ -7,16 +8,15 @@ import { DatosService } from 'src/app/Servicios/datos.service';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
-sobreMi:any;
+persona:any;
 
-constructor(private datos:DatosService) {}
+constructor(private datos:DatosService, protected auth:AuthService) {}
 
 ngOnInit(): void {
   this.datos.getDatos().subscribe(data => {
-  this.sobreMi = data.sobreMi;
+  this.persona = data.persona;
   })
 
 }
-
 
 }

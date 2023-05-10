@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/Servicios/datos.service';
+import { AuthService } from 'src/app/Servicios/auth.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -9,7 +10,7 @@ import { DatosService } from 'src/app/Servicios/datos.service';
 export class ProyectosComponent implements OnInit {
 proyectos:any;
 
-constructor(private datos:DatosService) {}
+constructor(private datos:DatosService, protected auth:AuthService) {}
 
 
 

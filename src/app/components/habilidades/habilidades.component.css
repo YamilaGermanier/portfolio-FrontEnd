@@ -2,7 +2,7 @@
     height: fit-content;
     padding: 8rem;
   }
-  
+
   .progress {
     margin-top: 10px;
     margin-bottom: 20px;
@@ -12,7 +12,7 @@
   .skill_tech p {
     color: whitesmoke;
     font-size: 1.2vw;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Times New Roman', Times, serif;
   }
 
   /*responsive*/

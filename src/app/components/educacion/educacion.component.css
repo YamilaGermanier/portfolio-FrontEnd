@@ -47,6 +47,11 @@ h4 {
     z-index: 1;
 }
 
+.formato {
+    margin: 2.5vw;
+    color: #12b395;
+}
+
 /*responsive h4*/
 @media (max-width:1200px){
     h4 {
@@ -106,22 +111,22 @@ h4 {
 
 /*responsive th td*/
 @media (max-width:1200px){
-    th,
-    td {
+    .row,
+    .col {
         font-size: 2vw;
     }
 }
 
 @media (max-width:768px){
-    th,
-    td {
+    .row,
+    .col{
         font-size: 3.5vw;
     }
 }
 
 @media (max-width:550px){
-    th,
-    td {
+    .row,
+    .col {
         font-size: 5vw;
     }
 }

@@ -1,7 +1,7 @@
 <section class="banner">
 
     <!-- Button modal EDITAR -->
-    <button type="button" class="btn btn-light edit-banner" data-bs-toggle="modal" data-bs-target="#editarBanner">
+    <button type="button" class="btn btn-light edit-banner" data-bs-toggle="modal" data-bs-target="#editarBanner"  *ngIf="auth.logIn()">
         <i class="bi bi-pencil-square"></i>
     </button>
 
