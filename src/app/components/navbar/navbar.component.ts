@@ -9,10 +9,22 @@ import { AuthService } from 'src/app/Servicios/auth.service';
 })
 
 export class NavbarComponent implements OnInit {
+  adminLog=false;
 
-  constructor(protected auth:AuthService){}
+  constructor(protected auth:AuthService) {
+    const authenticated = localStorage.getItem('adminLog');
+    if (authenticated && authenticated === 'true') {
+      this.adminLog= true;
+    } else {
+      this.adminLog = false;
+    }
+  }
   
   ngOnInit(): void {}
 
+
+  logout():void{
+    localStorage.removeItem('adminLog');
+  }
 }
 

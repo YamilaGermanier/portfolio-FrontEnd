@@ -16,11 +16,11 @@
                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ejemplo@ejemplo.com" formControlName="email" [class.border-danger]="MailInvalid">
                         </div>
                         <!-- Mensajes en caso de error -->
-                        <div *ngIf="Mail?.errors  && Mail?.touched">    
-                            <p *ngIf="Mail?.hasError('required')" class="error">
+                        <div *ngIf="Email?.errors  && Email?.touched">    
+                            <p *ngIf="Email?.hasError('required')" class="error">
                                 Debe ingresar un email.
                             </p>
-                            <p *ngIf="Mail?.hasError('email')" class="error">
+                            <p *ngIf="Email?.hasError('email')" class="error">
                                 El formato del email debe ser válido.
                               </p>
                         </div>

@@ -7,6 +7,7 @@ import { UsuarioService } from './usuario.service';
 import { Usuario } from '../Entidades/usuario';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,35 +15,37 @@ export class AuthService {
   url='http://localhost:8080/'; //url de la api  http://localhost:8080/
    user:any;
 
-  constructor(private userServ:UsuarioService) {
+  constructor(private userServ:UsuarioService, private route:Router) {
     this.getUser();
   }
   
   getUser():void{
-    this.userServ.getById(1).subscribe((data)=>{
+    this.userServ.verUsuario(1).subscribe((data)=>{
       this.user = data;
     });
   }
 
-  authenticate(credenciales:Usuario): boolean{
-    const authUser =
-      credenciales.email == this.user.email &&
-      credenciales.password == this.user.password;
-    if (authUser) {
-      localStorage.setItem('auth_token', 'true');
+  verificacion(usuario:Usuario): boolean{
+    const userAdmin =
+      usuario.email == this.user.email &&
+      usuario.password == this.user.password;
+    if (userAdmin) {
+      localStorage.setItem('adminLog', 'true');
+      window.location.reload();
+      this.route.navigate(['/inicio']);
       return true;
     } else {
       return false;
     }
-  }  
-
-  logout(){
-    localStorage.removeItem('auth_token');
   }
 
+  logout():void{
+    localStorage.removeItem('adminLog');
+  }
+}
   //verificar sesión
-  public logIn():boolean {
-    return (localStorage.getItem('auth_token') !==null) ? true : false
+  /*public logIn():boolean {
+    return (localStorage.getItem('adminLog') !==null) ? true : false
   }
   
 }

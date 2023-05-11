@@ -36,9 +36,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#Proyectos">Proyectos</a>
                 </li>
-                <li class="nav-item">
+                <!--li class="nav-item">
                     <a class="nav-link" href="#Contacto">Contacto</a>
-                </li>
+                </li    SACO ESTA SECCIÓN POR FALTA DE TIEMPO-->
             </ul>
             <div class="redes">
                 <ul class="list-group list-group-horizontal list-group-item-success">
@@ -53,8 +53,8 @@
     <!-- Button trigger modal Login -->
     <div>
         <button type="button" class="btn btn-dark me-2" data-bs-toggle="modal" data-bs-target="#loginModal" routerLink="/loginModal">
-            <a *ngIf="!auth.logIn()"><i class="fa-solid fa-user"></i></a>
-            <a href="#" *ngIf="auth.logIn()"><i class="fa-solid fa-user-slash"></i></a>
+            <a *ngIf="!adminLog"><i class="fa-solid fa-user"></i></a>
+            <a href="#" *ngIf="adminLog" (click)="logout()"><i class="fa-solid fa-user-slash"></i></a>
         </button>
     </div>
 

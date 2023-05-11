@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  protected miUrl = 'http://localhost:8080';
+  protected miUrl = 'http://localhost:8080/usuario/';
   private usuario: Usuario = new Usuario('', '');
 
   constructor(protected httpClient:HttpClient) {  }
@@ -24,7 +24,7 @@ export class UsuarioService {
     return this.httpClient.get<Usuario[]>(this.miUrl + 'lista');
   }
 
-  public getById(id: number):Observable<Usuario>{
+  public verUsuario(id: number):Observable<Usuario>{
     return this.httpClient.get<Usuario>(this.miUrl + `ver/${id}`);
   }
 

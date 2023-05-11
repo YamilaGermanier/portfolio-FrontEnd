@@ -7,15 +7,11 @@ import { Persona } from '../Entidades/persona-entity';
   providedIn: 'root'
 })
 export class PersonaService {
-url =  'https://localhost:8080/persona/'
+url = 'https://localhost:8080/persona/';
 
   constructor(private httpClient:HttpClient) { }
 
-  public lista(): Observable<Persona[]>{
-    return this.httpClient.get<Persona[]>(this.url + 'lista');
-  }
-
-  public getById(id: number):Observable<Persona>{
+  public verPersona(id: number):Observable<Persona>{
     return this.httpClient.get<Persona>(this.url + `ver/${id}`);
   }
 

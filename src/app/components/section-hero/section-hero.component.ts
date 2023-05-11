@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaService } from 'src/app/Servicios/persona.service';
 import { Persona } from 'src/app/Entidades/persona-entity';
 import { AuthService } from 'src/app/Servicios/auth.service';
+import { PersonaService } from 'src/app/Servicios/persona.service';
 
 @Component({
   selector: 'app-section-hero',
@@ -9,25 +9,33 @@ import { AuthService } from 'src/app/Servicios/auth.service';
   styleUrls: ['./section-hero.component.css']
 })
 export class SectionHeroComponent implements OnInit {
- personas: Persona[] = [];
- person:any={};
+  nombre: any;
+  apellido: any;
+  mensaje: any;
+  titulo: any;
+  ciudad: any;
+  imagenPerfil: any;
 
- constructor(private persoServ:PersonaService, protected auth:AuthService) { 
-  nombre: PersonaService;
-  apellido: PersonaService;
-  mensaje: PersonaService;
-  titulo: PersonaService;
-  ubicacion: PersonaService;
-  imagenPerfil: PersonaService;
+ adminLog=false;
+
+ constructor(protected auth:AuthService, private persoServ: PersonaService) {
+  const authenticated = localStorage.getItem('adminLog');
+   if (authenticated && authenticated === 'true') {
+     this.adminLog= true;
+   } else {
+     this.adminLog = false;
+   }
  }
 
  ngOnInit(): void {
-  this.verListaPersona();
- }
-
- public verListaPersona():void{
-    this.persoServ.lista().subscribe(data => {this.personas=data});
- }
+  this.persoServ.verPersona(1).subscribe(data => {
+    this.nombre = data.nombre;
+    this.apellido = data;
+    this.ciudad = data;
+    this.imagenPerfil = data;
+    this.mensaje = data;
+})
+}
 
 
   /*nombre: any;

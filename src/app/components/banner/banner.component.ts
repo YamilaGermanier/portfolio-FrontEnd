@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/Servicios/datos.service';
 import { AuthService } from 'src/app/Servicios/auth.service';
+import { BannerService } from 'src/app/Servicios/banner.service';
+
 
 @Component({
   selector: 'app-banner',
@@ -9,18 +10,24 @@ import { AuthService } from 'src/app/Servicios/auth.service';
 })
 export class BannerComponent implements OnInit {
   //Para traer datos del json
-  banner:any;
-
-  constructor(private datos:DatosService, protected auth:AuthService) {}
-
-
-
-  ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
-      this.banner = data.banner;
-    })
-    
+  imagen:any;
+  adminLog=false;
+  
+  constructor(protected auth:AuthService, private banServ:BannerService) {
+    const authenticated = localStorage.getItem('adminLog');
+    if (authenticated && authenticated === 'true') {
+      this.adminLog= true;
+    } else {
+      this.adminLog = false;
+    }
   }
+  
+  ngOnInit(): void {
+   this.banServ.verBanner(1).subscribe(data =>{
+    this.imagen = data.imagenBanner;
+   });
+  }
+  
 
 }
 

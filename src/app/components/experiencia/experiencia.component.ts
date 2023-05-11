@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatosService } from 'src/app/Servicios/datos.service';
 import { AuthService } from 'src/app/Servicios/auth.service';
+import { ExperienciasService } from 'src/app/Servicios/experiencias.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -10,10 +11,25 @@ import { AuthService } from 'src/app/Servicios/auth.service';
 
 export class ExperienciaComponent implements OnInit {
   //Para traer datos de los array del json
-  experiencias:any = [];
+  experiencias:any;
+  adminLog=false;
 
-  constructor(private datos:DatosService, protected auth:AuthService) {}
+  constructor(protected auth:AuthService, private expeServ:ExperienciasService) {
+    /*const authenticated = localStorage.getItem('adminLog');
+    if (authenticated && authenticated === 'true') {
+      this.adminLog= true;
+    } else {
+      this.adminLog = false;
+    }*/
+  }
 
+  ngOnInit(): void {
+    this.expeServ.lista().subscribe(data=>{
+      this.experiencias = data;
+    })
+  }
+
+}
   /*borrar(id:number):{
     if(id !=undefined){
       this.espeServ.delete(id).subscribe(data =>{
@@ -25,11 +41,3 @@ export class ExperienciaComponent implements OnInit {
   }*/
 
 
-  ngOnInit(): void {
-    this.datos.getDatos().subscribe(data => {
-      this.experiencias = data.experiencias;
-    })
-    
-  }
-
-}

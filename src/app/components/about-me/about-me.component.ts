@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/Servicios/datos.service';
+import { AboutMeService } from 'src/app/Servicios/about-me.service';
 import { AuthService } from 'src/app/Servicios/auth.service';
 
 @Component({
@@ -8,15 +8,22 @@ import { AuthService } from 'src/app/Servicios/auth.service';
   styleUrls: ['./about-me.component.css']
 })
 export class AboutMeComponent implements OnInit {
-persona:any;
+aboutMe:any;
+adminLog=false;
 
-constructor(private datos:DatosService, protected auth:AuthService) {}
+constructor(protected auth:AuthService, private about:AboutMeService) {
+  const authenticated = localStorage.getItem('adminLog');
+  if (authenticated && authenticated === 'true') {
+    this.adminLog= true;
+  } else {
+    this.adminLog = false;
+  }
+}
+
 
 ngOnInit(): void {
-  this.datos.getDatos().subscribe(data => {
-  this.persona = data.persona;
-  })
-
-}
+  this.about.verSobreMi(1).subscribe(data => {
+    this.aboutMe = data});
+  }
 
 }

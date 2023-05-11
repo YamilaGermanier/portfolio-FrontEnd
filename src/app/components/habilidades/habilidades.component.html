@@ -4,7 +4,7 @@
 
     <div class="d-flex align-self-end me-5">
       <!-- Button modal MÁS HABILIDADES -->
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addHab"  *ngIf="auth.logIn()">
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addHab"  >
         <i class="bi bi-plus-square-fill"></i>
       </button>
     </div>
@@ -17,7 +17,7 @@
           <p class="d-inline pe-3 mb-0"> {{habilidad.nombre}} </p>
           <div class="d-flex justify-content-between align-items-center mb-2">
             <div class="col-2 pe-0">
-              <div class="cap-buttuns"  *ngIf="auth.logIn()">
+              <div class="cap-buttuns"  >
 
                 <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editHab">
                   <i class="bi bi-pencil-square"></i>

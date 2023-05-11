@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/Servicios/datos.service';
+import { ProyectosService } from 'src/app/Servicios/proyectos.service';
 import { AuthService } from 'src/app/Servicios/auth.service';
 
 @Component({
@@ -9,14 +9,22 @@ import { AuthService } from 'src/app/Servicios/auth.service';
 })
 export class ProyectosComponent implements OnInit {
 proyectos:any;
+adminLog=false;
 
-constructor(private datos:DatosService, protected auth:AuthService) {}
+constructor(protected auth:AuthService, private proyectServ:ProyectosService) {
+  /*const authenticated = localStorage.getItem('adminLog');
+  if (authenticated && authenticated === 'true') {
+    this.adminLog= true;
+  } else {
+    this.adminLog = false;
+  }*/
+}
 
 
 
 ngOnInit(): void {
-  this.datos.getDatos().subscribe(data => {
-    this.proyectos = data.proyectos;
+  this.proyectServ.lista().subscribe(data => {
+    this.proyectos = data;
   })
 }
 

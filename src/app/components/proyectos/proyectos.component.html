@@ -4,7 +4,7 @@
     <h3>Estos son algunos proyectos que he creado recientemente...</h3>
     <div class="d-flex align-self-end me-5">
       <!-- Button modal MÁS Proyectos -->
-      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPro"  *ngIf="auth.logIn()">
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPro"  *ngIf="adminLog">
         <i class="bi bi-plus-square-fill"></i>
       </button>
     </div>
@@ -16,14 +16,14 @@
             <div class="proyecto">
               <img src="./assets/img/calculator.jpg" alt="Proyecto 1">
               <div class="overlay">
-                <p> {{proyecto.nombre}} </p>
+                <p> {{proyecto.nombreProyecto}} </p>
                 <div class="iconos-contenedor d-flex justify-content-center">
-                  <a [href]="proyecto.url" target="_blank" rel="noopener noreferrer">
+                  <a [href]="proyecto.urlProyecto" target="_blank" rel="noopener noreferrer">
                     <i class="bi bi-github"></i>
                   </a>
                 </div>
               </div>
-              <div class="cap-buttuns"  *ngIf="auth.logIn()">     
+              <div class="cap-buttuns"  *ngIf="adminLog">     
                 <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editPro">
                 <i class="bi bi-pencil-square"></i>
                 </button>

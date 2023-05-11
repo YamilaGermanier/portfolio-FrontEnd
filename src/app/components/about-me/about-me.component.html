@@ -2,7 +2,7 @@
 
   <!-- Button modal EDITAR -->
   <div class="d-flex align-self-end">
-    <button type="button" class="btn btn-light " data-bs-toggle="modal" data-bs-target="#editarSobreMi"  *ngIf="auth.logIn()">
+    <button type="button" class="btn btn-light " data-bs-toggle="modal" data-bs-target="#editarSobreMi"  *ngIf="adminLog">
       <i class="bi bi-pencil-square"></i>
     </button>
   </div>
@@ -14,7 +14,7 @@
 
       <h1 class="seccion-titulo text-center">Un poco sobre mí:</h1>
 
-      <p class="text-center presentacion"> {{persona.sobreMi}} </p>
+      <p class="text-center presentacion">{{aboutMe.about}} </p>
     </div>
   </div>
 

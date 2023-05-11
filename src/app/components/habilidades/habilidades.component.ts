@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DatosService } from 'src/app/Servicios/datos.service';
 import { AuthService } from 'src/app/Servicios/auth.service';
 import { Habilidades } from 'src/app/Entidades/habilidades';
 import { HabilidadesService } from 'src/app/Servicios/habilidades.service';
@@ -11,10 +10,7 @@ import { HabilidadesService } from 'src/app/Servicios/habilidades.service';
 })
 export class HabilidadesComponent implements OnInit {
 habilidades:Habilidades[]=[];
-
- constructor(private servHab:HabilidadesService, protected auth:AuthService) {}
-
-
+adminLog=false;
 
 ngOnInit(): void {
   this.cargarHabilidad();
@@ -23,6 +19,16 @@ ngOnInit(): void {
 cargarHabilidad():void {
   this.servHab.lista().subscribe(data => {this.habilidades = data})
 }
+
+constructor(protected auth:AuthService, private servHab:HabilidadesService) {
+  /*const authenticated = localStorage.getItem('adminLog');
+  if (authenticated && authenticated === 'true') {
+    this.adminLog= true;
+  } else {
+    this.adminLog = false;
+  }*/
+}
+
 
 }
 
