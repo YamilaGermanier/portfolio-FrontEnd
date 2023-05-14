@@ -7,7 +7,7 @@ import { Habilidades } from '../Entidades/habilidades';
   providedIn: 'root'
 })
 export class HabilidadesService {
-url = 'http://localhost:8080/habilidades/';
+protected url = 'http://localhost:8080/habilidades/';
 
   constructor(private httpClient:HttpClient) { }
 
@@ -15,7 +15,7 @@ url = 'http://localhost:8080/habilidades/';
     return this.httpClient.get<Habilidades[]>(this.url + 'lista');
   }
 
-  public getById(id: number):Observable<Habilidades>{
+  public verHabilidad(id: number):Observable<Habilidades>{
     return this.httpClient.get<Habilidades>(this.url + `ver/${id}`);
   }
 

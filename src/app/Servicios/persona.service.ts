@@ -11,7 +11,7 @@ url = 'https://localhost:8080/persona/';
 
   constructor(private httpClient:HttpClient) { }
 
-  public verPersona(id: number):Observable<Persona>{
+  public buscarPersona(id: number):Observable<Persona>{
     return this.httpClient.get<Persona>(this.url + `ver/${id}`);
   }
 

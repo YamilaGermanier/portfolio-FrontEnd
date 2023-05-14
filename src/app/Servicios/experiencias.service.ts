@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Experiencias } from '../Entidades/experiencia';
+import { Experiencias } from '../Entidades/experiencias';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,7 @@ export class ExperienciasService {
     return this.httpClient.put<any>(this.url + 'editar', expe);
   }
 
-  public borrar(id: number):Observable<any>{
-    return this.httpClient.delete<any>(this.url + `borrar/${id}`); 
+ borrar(id: number): Observable<any> {
+    return this.httpClient.delete(this.url + this.url + '/borrar/' + id); //tampoco funciona esta opcion T_T
   }
 }

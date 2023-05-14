@@ -13,14 +13,14 @@ titulos:any;
 capacitaciones:any;
 adminLog=false;
 
-constructor(protected auth:AuthService, private titulServ: TitulosService, private capServ: CapacitacionesService){}
-  /*const authenticated = localStorage.getItem('adminLog');
+constructor(protected auth:AuthService, private titulServ: TitulosService, private capServ: CapacitacionesService){
+  const authenticated = localStorage.getItem('adminLog');
   if (authenticated && authenticated === 'true') {
     this.adminLog= true;
   } else {
     this.adminLog = false;
-  }*/
-
+  }
+}
 
 ngOnInit(): void {
   this.titulServ.lista().subscribe(data => {

@@ -12,12 +12,12 @@ proyectos:any;
 adminLog=false;
 
 constructor(protected auth:AuthService, private proyectServ:ProyectosService) {
-  /*const authenticated = localStorage.getItem('adminLog');
+  const authenticated = localStorage.getItem('adminLog');
   if (authenticated && authenticated === 'true') {
     this.adminLog= true;
   } else {
     this.adminLog = false;
-  }*/
+  }
 }
 
 

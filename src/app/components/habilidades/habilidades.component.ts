@@ -21,12 +21,12 @@ cargarHabilidad():void {
 }
 
 constructor(protected auth:AuthService, private servHab:HabilidadesService) {
-  /*const authenticated = localStorage.getItem('adminLog');
+  const authenticated = localStorage.getItem('adminLog');
   if (authenticated && authenticated === 'true') {
     this.adminLog= true;
   } else {
     this.adminLog = false;
-  }*/
+  }
 }
 
 

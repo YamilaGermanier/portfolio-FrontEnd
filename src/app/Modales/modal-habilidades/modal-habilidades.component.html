@@ -15,9 +15,9 @@
       
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de la habilidad" formControlName="habilidad" [class.border-danger]="HabilidadInvalid">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de la habilidad" formControlName="nombre" [(ngModel)]="nombre" [style.color.white] [class.border-danger]="NombreInvalid">
           </div>
-          <div *ngIf="HabilidadInvalid">
+          <div *ngIf="NombreInvalid">
             <p class="error" >
               Debe ingresar una habilidad.
             </p>
@@ -25,13 +25,20 @@
       
           <div class="mb-3">
             <label for="formGroupExampleInput2" class="form-label">Porcentaje</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese el porcentaje" formControlName="porcentaje" [class.border-danger]="PorcentajeInvalid">
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese el porcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje" [class.border-danger]="PorcentajeInvalid">
           </div>
           <div *ngIf="PorcentajeInvalid">
             <p class="error" >
               Debe ingresar un porcentaje.
             </p>
           </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Color</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" formControlName="color" [(ngModel)]="color">
+          </div>
+
+          
             
         </div>
         <div class="modal-footer">
@@ -62,7 +69,7 @@
             <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="nombre">
           </div>
-          <div *ngIf="HabilidadInvalid">
+          <div *ngIf="NombreInvalid">
             <p class="error" >
               Debe ingresar una habilidad.
             </p>
@@ -103,7 +110,7 @@
         
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-danger">Eliminar</button>
+          <button type="submit" class="btn btn-danger" (click)="borrar(id)">Eliminar</button>
         </div>
 
     </div>

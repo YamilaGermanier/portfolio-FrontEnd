@@ -4,7 +4,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar experiencia</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" aria-label="Close"></button>
         </div>
 
         <!-- Formulario -->
@@ -14,7 +14,7 @@
         
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Inicio</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [class.border-danger]="InicioInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [(ngModel)]="inicio" [class.border-danger]="InicioInvalid">
             </div>
             <div *ngIf="Inicio?.errors  && Inicio?.touched">
               <p *ngIf="Inicio?.hasError('required')" class="error">
@@ -24,7 +24,7 @@
             
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Fin</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [class.border-danger]="FinInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [(ngModel)]="fin"[class.border-danger]="FinInvalid">
             </div>
             <div *ngIf="Fin?.errors  && Fin?.touched">
               <p *ngIf="Fin?.hasError('required')" class="error">
@@ -34,7 +34,7 @@
 
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Puesto</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [class.border-danger]="PuestoInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [(ngModel)]="puesto" [class.border-danger]="PuestoInvalid">
             </div>
             <div *ngIf="Puesto?.errors  && Puesto?.touched">
               <p *ngIf="Puesto?.hasError('required')" class="error">
@@ -45,7 +45,7 @@
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                placeholder="Descripción del puesto o cargo" formControlName="descripcion" [class.border-danger]="DescripcionInvalid"></textarea>
+                placeholder="Descripción del puesto o cargo" [(ngModel)]="descripcion" formControlName="descripcion" [class.border-danger]="DescripcionInvalid"></textarea>
             </div>
             <div *ngIf="Descripcion?.errors  && Descripcion?.touched">
               <p *ngIf="Descripcion?.hasError('required')" class="error">
@@ -62,7 +62,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success">Guardar cambios</button>
+            <button type="submit" (click)="agregar()" class="btn btn-success" data-bs-dismiss="modal">Guardar cambios</button>
           </div>
         
         </form>
@@ -84,14 +84,14 @@
         </div>
 
         <!-- Formulario editar -->
-        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <form [formGroup]="form">
 
           <div class="modal-body">
             
             
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Inicio</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [class.border-danger]="InicioInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que comenzó a trabajar" formControlName="inicio" [(ngModel)]="inicio" [class.border-danger]="InicioInvalid">
             </div>
             <div *ngIf="Inicio?.errors  && Inicio?.touched">
               <p *ngIf="Inicio?.hasError('required')" class="error">
@@ -100,7 +100,7 @@
             </div>
             <div class="mb-3">
               <label for="formGroupExampleInput" class="form-label">Fin</label>
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [class.border-danger]="FinInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Año en el que terminó de trabajar" formControlName="fin" [(ngModel)]="fin" [class.border-danger]="FinInvalid">
             </div>
             <div *ngIf="Fin?.errors  && Fin?.touched">
               <p *ngIf="Fin?.hasError('required')" class="error">
@@ -110,7 +110,7 @@
 
             <div class="mb-3">
               <label for="formGroupExampleInput2" class="form-label">Puesto</label>
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [class.border-danger]="PuestoInvalid">
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del puesto o cargo" formControlName="puesto" [(ngModel)]="puesto" [class.border-danger]="PuestoInvalid">
             </div>
             <div *ngIf="Puesto?.errors  && Puesto?.touched">
               <p *ngIf="Puesto?.hasError('required')" class="error">
@@ -121,7 +121,7 @@
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                placeholder="Descripción del puesto o cargo" formControlName="descripcion" [class.border-danger]="DescripcionInvalid"></textarea>
+                placeholder="Descripción del puesto o cargo" [(ngModel)]="descripcion" formControlName="descripcion" [class.border-danger]="DescripcionInvalid"></textarea>
             </div>
             <div *ngIf="Descripcion?.errors  && Descripcion?.touched">
               <p *ngIf="Descripcion?.hasError('required')" class="error">
@@ -137,7 +137,7 @@
             
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="limpiar()">Cancelar</button>
             <button type="submit" class="btn btn-success">Guardar cambios</button>
           </div>
 
@@ -161,7 +161,7 @@
   
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="submit" class="btn btn-danger">Eliminar</button>
+          <button type="submit" class="btn btn-danger" (click)="eliminar(id)">Eliminar</button>
         </div>
       </div>
     </div>

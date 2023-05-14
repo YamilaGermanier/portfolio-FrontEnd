@@ -5,7 +5,7 @@
 
     <div class="d-flex align-self-end me-5">
         <!-- Button modal MÁS EXPERIENCIA -->
-        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#masExp">
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#masExp" *ngIf="adminLog">
             <i class="bi bi-plus-square-fill"></i>
         </button>
     </div>
@@ -26,7 +26,7 @@
             <div class="col-md-5">
                 {{experiencia.descripcion}}
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" *ngIf="adminLog">
 
                 <ul class="d-flex align-self-end me-5" >
                     <ol>

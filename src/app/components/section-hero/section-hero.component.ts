@@ -9,13 +9,7 @@ import { PersonaService } from 'src/app/Servicios/persona.service';
   styleUrls: ['./section-hero.component.css']
 })
 export class SectionHeroComponent implements OnInit {
-  nombre: any;
-  apellido: any;
-  mensaje: any;
-  titulo: any;
-  ciudad: any;
-  imagenPerfil: any;
-
+persona: Persona = {nombre:'', apellido: '', titulo: '', ciudad:'', mensaje:'',imagenPerfil:''}
  adminLog=false;
 
  constructor(protected auth:AuthService, private persoServ: PersonaService) {
@@ -28,13 +22,9 @@ export class SectionHeroComponent implements OnInit {
  }
 
  ngOnInit(): void {
-  this.persoServ.verPersona(1).subscribe(data => {
-    this.nombre = data.nombre;
-    this.apellido = data;
-    this.ciudad = data;
-    this.imagenPerfil = data;
-    this.mensaje = data;
-})
+  this.persoServ.buscarPersona(1).subscribe(data => {
+    this.persona = data;
+});
 }
 
 

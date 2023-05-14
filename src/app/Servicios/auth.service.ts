@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { ModalLoginComponent } from '../Modales/modal-login/modal-login.component';
 import { UsuarioService } from './usuario.service';
 import { Usuario } from '../Entidades/usuario';
 
@@ -12,7 +11,7 @@ import { Usuario } from '../Entidades/usuario';
   providedIn: 'root'
 })
 export class AuthService {
-  url='http://localhost:8080/'; //url de la api  http://localhost:8080/
+  
    user:any;
 
   constructor(private userServ:UsuarioService, private route:Router) {
@@ -30,8 +29,8 @@ export class AuthService {
       usuario.email == this.user.email &&
       usuario.password == this.user.password;
     if (userAdmin) {
-      localStorage.setItem('adminLog', 'true');
       window.location.reload();
+      localStorage.setItem('adminLog', 'true');
       this.route.navigate(['/inicio']);
       return true;
     } else {

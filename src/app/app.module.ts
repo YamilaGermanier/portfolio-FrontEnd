@@ -26,6 +26,16 @@ import { ModalSectionHeroComponent } from './Modales/modal-section-hero/modal-se
 import { ModalHabilidadesComponent } from './Modales/modal-habilidades/modal-habilidades.component';
 import { ModalProyectoComponent } from './Modales/modal-proyecto/modal-proyecto.component';
 import { IndexComponent } from './components/index/index.component';
+import { PersonaService } from './Servicios/persona.service';
+import { AboutMeService } from './Servicios/about-me.service';
+import { AuthService } from './Servicios/auth.service';
+import { BannerService } from './Servicios/banner.service';
+import { CapacitacionesService } from './Servicios/capacitaciones.service';
+import { ExperienciasService } from './Servicios/experiencias.service';
+import { HabilidadesService } from './Servicios/habilidades.service';
+import { ProyectosService } from './Servicios/proyectos.service';
+import { TitulosService } from './Servicios/titulos.service';
+import { UsuarioService } from './Servicios/usuario.service';
 
 @NgModule({
   declarations: [
@@ -58,7 +68,17 @@ import { IndexComponent } from './components/index/index.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ PersonaService,
+  AboutMeService,
+  AuthService,
+  BannerService,
+  CapacitacionesService,
+  ExperienciasService,
+  HabilidadesService,
+  ProyectosService,
+  TitulosService,
+  UsuarioService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
