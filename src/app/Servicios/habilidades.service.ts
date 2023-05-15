@@ -7,7 +7,7 @@ import { Habilidades } from '../Entidades/habilidades';
   providedIn: 'root'
 })
 export class HabilidadesService {
-protected url = 'http://localhost:8080/habilidades/';
+protected url = 'https://yamilager.onrender.com/habilidades/';
 
   constructor(private httpClient:HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Proyectos } from '../Entidades/proyectos';
   providedIn: 'root'
 })
 export class ProyectosService {
-  url = 'http://localhost:8080/proyectos/';
+  url = 'https://yamilager.onrender.com/proyectos/';
 
   constructor(private httpClient:HttpClient) { }
 

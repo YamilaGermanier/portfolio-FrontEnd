@@ -7,7 +7,7 @@ import { Banner} from '../Entidades/banner-entity';
   providedIn: 'root'
 })
 export class BannerService {
-  url = 'http://localhost:8080/banner/';
+  url = 'https://yamilager.onrender.com/banner/';
 
   constructor(private httpClient:HttpClient) { }
 

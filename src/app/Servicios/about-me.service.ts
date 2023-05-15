@@ -7,7 +7,7 @@ import { SobreMi } from '../Entidades/sobreMi';
   providedIn: 'root'
 })
 export class AboutMeService {
-  url = 'http://localhost:8080/sobreMi/';
+  url = 'https://yamilager.onrender.com/sobreMi/';
 
   constructor(private httpClient:HttpClient) { }
 

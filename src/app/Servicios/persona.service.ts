@@ -7,7 +7,7 @@ import { Persona } from '../Entidades/persona-entity';
   providedIn: 'root'
 })
 export class PersonaService {
-url = 'https://localhost:8080/persona/';
+url = 'https://yamilager.onrender.com/persona/';
 
   constructor(private httpClient:HttpClient) { }
 

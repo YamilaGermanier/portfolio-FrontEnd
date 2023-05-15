@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsuarioService {
-  protected miUrl = 'http://localhost:8080/usuario/';
+  protected miUrl = 'https://yamilager.onrender.com/usuario/';
   private usuario: Usuario = new Usuario('', '');
 
   constructor(protected httpClient:HttpClient) {  }

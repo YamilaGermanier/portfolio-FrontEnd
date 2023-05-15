@@ -7,7 +7,7 @@ import { Capacitaciones } from '../Entidades/capacitaciones';
   providedIn: 'root'
 })
 export class CapacitacionesService {
-  url = 'http://localhost:8080/capacitaciones/';
+  url = 'https://yamilager.onrender.com/capacitaciones/';
 
   constructor(private httpClient:HttpClient) { }
 

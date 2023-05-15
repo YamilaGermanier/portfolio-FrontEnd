@@ -8,7 +8,7 @@ import { Experiencias } from '../Entidades/experiencias';
 })
 export class ExperienciasService {
 
-  url = 'http://localhost:8080/experiencias/';
+  url = 'https://yamilager.onrender.com/experiencias/';
 
   constructor(private httpClient:HttpClient) { }
 

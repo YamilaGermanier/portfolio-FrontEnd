@@ -7,7 +7,7 @@ import { Titulos } from '../Entidades/titulos';
   providedIn: 'root'
 })
 export class TitulosService {
-  url = 'http://localhost:8080/titulos/';
+  url = 'https://yamilager.onrender.com/titulos/';
 
   constructor(private httpClient:HttpClient) { }
 
