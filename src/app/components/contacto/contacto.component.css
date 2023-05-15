@@ -1,0 +1,76 @@
+.contacto {
+    height: fit-content;
+  }
+  
+.btn form {
+  display: flex;
+  align-content: center;
+}
+  
+label {
+  color: #000;
+  font-weight: bolder;
+  font-size: 1.2vw;
+}
+  
+button,
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid lighten(black, 50%);
+  font: sans-serif;
+  box-sizing: border-box;
+}
+  
+input:focus,
+textarea:focus { 
+  border-color: #000;
+}
+  
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+  
+.contacto form div .input {
+  margin-left: 10px;
+}
+
+.wrapper {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  margin-bottom: 10rem;
+}
+  
+form {
+  margin: 0 auto;
+  width: 420px;
+  padding: 1em;
+}
+  
+.danger {
+  border-color: #000;
+  color: rgb(255, 255, 255);
+  background-color: #ff0000a9;
+  width: fit-content;
+}
+
+/*responsive*/
+@media (max-width: 1200px) {
+  label {
+    font-size: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  label {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 550px) {
+  label {
+    font-size: 6vw;
+  }
+}

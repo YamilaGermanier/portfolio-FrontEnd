@@ -1,0 +1,22 @@
+<section class="sobre-mi seccion-oscura " id="Sobre-mí">
+
+  <!-- Button modal EDITAR -->
+  <div class="d-flex align-self-end">
+    <button type="button" class="btn btn-light " data-bs-toggle="modal" data-bs-target="#editarSobreMi"  *ngIf="adminLog">
+      <i class="bi bi-pencil-square"></i>
+    </button>
+  </div>
+
+
+  <div class="container-fluid">
+
+    <div class="col">
+
+      <h1 class="seccion-titulo text-center">Un poco sobre mí:</h1>
+
+      <p class="text-center presentacion">{{aboutMe.about}} </p>
+    </div>
+  </div>
+
+</section>
+<app-modal-about-me></app-modal-about-me>

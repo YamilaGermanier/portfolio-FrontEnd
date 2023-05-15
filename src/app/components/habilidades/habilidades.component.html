@@ -1,0 +1,47 @@
+<section class="skills seccion-color" id="Skills">
+    
+    <h1 class="seccion-titulo">Habilidades</h1>
+
+    <div class="d-flex align-self-end me-5" *ngIf="adminLog">
+      <!-- Button modal MÁS HABILIDADES -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addHab"  >
+        <i class="bi bi-plus-square-fill"></i>
+      </button>
+    </div>
+
+    <div class="container-fluid d-flex flex-column align-items-center" *ngFor="let habilidad of habilidades">
+
+      <div class="row">
+
+        <div class="skill_tech col-md-6">
+          <p class="d-inline pe-3 mb-0"> {{habilidad.nombre}} </p>
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="col-2 pe-0">
+              <div class="cap-buttuns" *ngIf="adminLog" >
+
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editHab">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delHab">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="progress">
+                <div class="progress-bar" role="progress-bar" aria-label="Warning example"  aria-valuemin="0" aria-valuemax="100" [style.width.%]="habilidad.porcentaje" [style.background-color]="habilidad.color">
+                  <span class="porcent d-flex justify-content-center align-items-center h-100 w-100"> {{habilidad.porcentaje}} </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <app-modal-habilidades></app-modal-habilidades>
+
+  </section>

@@ -1,0 +1,118 @@
+<!-- Button modal AGREGAR Habilidad-->
+
+<div class="modal fade" id="addHab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Habilidad</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+      
+        <div class="modal-body">
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre de la habilidad" formControlName="nombre" [(ngModel)]="nombre" [style.color.white] [class.border-danger]="NombreInvalid">
+          </div>
+          <div *ngIf="NombreInvalid">
+            <p class="error" >
+              Debe ingresar una habilidad.
+            </p>
+          </div>
+      
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Porcentaje</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Ingrese el porcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje" [class.border-danger]="PorcentajeInvalid">
+          </div>
+          <div *ngIf="PorcentajeInvalid">
+            <p class="error" >
+              Debe ingresar un porcentaje.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Color</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="" formControlName="color" [(ngModel)]="color">
+          </div>
+
+          
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- EDITAR habilidad-->
+<div class="modal fade" id="editHab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Editar habilidad</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+      <!-- form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+  
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Nombre de la habilidad</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="nombre">
+          </div>
+          <div *ngIf="NombreInvalid">
+            <p class="error" >
+              Debe ingresar una habilidad.
+            </p>
+          </div>
+  
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Porcentaje</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese el porcentaje">
+          </div>
+          <div *ngIf="PorcentajeInvalid">
+            <p class="error" >
+              Debe ingresar un porcentaje.
+            </p>
+          </div>
+        
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+
+      </form>
+      
+    </div>
+  </div>
+</div>
+  
+
+<!-- Eliminar Habilidad-->
+<div class="modal fade" id="delHab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que desea eliminar esta habilidad?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-danger" (click)="borrar(id)">Eliminar</button>
+        </div>
+
+    </div>
+  </div>
+</div>

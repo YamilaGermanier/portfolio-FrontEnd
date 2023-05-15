@@ -1,0 +1,40 @@
+<!-- Sección Proyectos --> 
+<section class="proyectos-recientes seccion-oscura d-flex flex-column" id="Proyectos">
+    <h1 class="seccion-titulo">Mis proyectos recientes</h1>
+    <h3>Estos son algunos proyectos que he creado recientemente...</h3>
+    <div class="d-flex align-self-end me-5">
+      <!-- Button modal MÁS Proyectos -->
+      <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addPro"  *ngIf="adminLog">
+        <i class="bi bi-plus-square-fill"></i>
+      </button>
+    </div>
+    <!-- galería de proyectos -->
+    <div class="container text-center proyectos-contenedor" *ngFor="let proyecto of proyectos">
+        <div class="row">
+          <!-- Proyecto 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="proyecto">
+              <img src="./assets/img/calculator.jpg" alt="Proyecto 1">
+              <div class="overlay">
+                <p> {{proyecto.nombreProyecto}} </p>
+                <div class="iconos-contenedor d-flex justify-content-center">
+                  <a [href]="proyecto.urlProyecto" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="cap-buttuns"  *ngIf="adminLog">     
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#editPro">
+                <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-dark my-1" data-bs-toggle="modal" data-bs-target="#delPro">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <app-modal-proyecto></app-modal-proyecto>   
+  </section>
+

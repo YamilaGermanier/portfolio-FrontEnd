@@ -1,0 +1,28 @@
+<section class="hero align-items-stretch" id="Inicio">
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col">
+
+        <button type="button" class="btn btn-dark hero-edit" data-bs-toggle="modal" data-bs-target="#editPerfil" *ngIf="adminLog">
+          <i class="bi bi-pencil-square"></i>
+        </button>
+
+
+        <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+          <img class="hero-imagen-desarrollador" src={{persona.imagenPerfil}} [alt]="">
+          <h1>  {{persona.nombre}} {{persona.apellido}} </h1>
+          <h2></h2>
+          <h4><i class="bi bi-geo-alt"></i>{{persona.ciudad}}</h4>
+         </div>
+         
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<app-modal-section-hero></app-modal-section-hero>

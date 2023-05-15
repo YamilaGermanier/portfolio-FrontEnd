@@ -1,0 +1,30 @@
+ <!-- Button modal EDITAR -->
+<!-- Modal -->
+<div class="modal fade" id="editarSobreMi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sobre mí</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+          
+          <div class="modal-body input-group">
+            <textarea class="form-control" aria-label="With textarea" formControlName="aboutMe"
+              [class.border-danger]="DescripcionInvalid"></textarea>
+          </div>
+          <div *ngIf="Descripcion?.errors  && Descripcion?.touched" >
+            <p *ngIf="Descripcion?.hasError('required')" class="error ms-3">
+              Debe ingresar algún texto de presentación.
+            </p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success">Guardar cambios</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>

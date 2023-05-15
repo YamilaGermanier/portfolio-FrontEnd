@@ -1,0 +1,15 @@
+.hero-banner-imagen {
+    margin-top: 5.9rem;
+  }
+
+.banner {
+  position: relative;
+  z-index: 0;
+}
+
+.edit-banner {
+  position: absolute;
+  right: 0.6rem;
+  top: 6rem;
+  z-index: 1;
+}

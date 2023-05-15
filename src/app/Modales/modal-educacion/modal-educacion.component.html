@@ -1,0 +1,302 @@
+<!-- AGREGAR TÍTULO ACADÉMICO-->
+
+<div class="modal fade" id="addAc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar título</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+        <div class="modal-body">
+
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
+            <input type="file" class="form-control" id="inputGroupFile01" formControlName="imagen" [class.border-danger]="ImagenInvalid">
+          </div>
+          <div *ngIf="Imagen?.errors  && Imagen?.touched">
+            <p *ngIf="Imagen?.hasError('required')" class="error">
+              Debe ingresar el logo de la institución.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Título</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título" formControlName="titulo" [class.border-danger]="TituloInvalid">
+          </div>
+          <div *ngIf="Titulo?.errors  && Titulo?.touched">
+            <p *ngIf="Titulo?.hasError('required')" class="error">
+              Debe ingresar el nombre del título académico obtenido.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Institución</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2"
+              placeholder="Institutción que otorga el título" formControlName="institucion" [class.border-danger]="InstitucionInvalid">
+          </div>
+          <div *ngIf="Institucion?.errors  && Institucion?.touched">
+            <p *ngIf="Institucion?.hasError('required')" class="error">
+              Debe ingresar el nombre de la institución que le otorgó el título.
+            </p>
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Año egreso</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese año de egreso" formControlName="fecha" [class.border-danger]="FechaInvalid">
+          </div>
+          <div *ngIf="Fecha?.errors  && Fecha?.touched">
+            <p *ngIf="Fecha?.hasError('required')" class="error">
+              Debe ingresar la fecha de egreso.
+            </p>
+          </div>
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- EDITAR FORMACIÓN ACADMÉMICA-->
+<div class="modal fade" id="editAc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar título</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div class="modal-body">
+
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Subir Imagen</label>
+            <input type="file" class="form-control" id="inputGroupFile01" formControlName="imagen" [class.border-danger]="ImagenInvalid">
+          </div>
+          <div *ngIf="Imagen?.errors  && Imagen?.touched">
+            <p *ngIf="Imagen?.hasError('required')" class="error">
+              Debe ingresar el logo de la institución.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Título</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Título" formControlName="titulo" [class.border-danger]="TituloInvalid">
+          </div>
+          <div *ngIf="Titulo?.errors  && Titulo?.touched">
+            <p *ngIf="Titulo?.hasError('required')" class="error">
+              Debe ingresar el nombre del título académico obtenido.
+            </p>
+          </div>
+
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Institución</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2"
+            placeholder="Institución que otorga el título" formControlName="institucion" [class.border-danger]="InstitucionInvalid">
+          </div>
+          <div *ngIf="Institucion?.errors  && Institucion?.touched">
+            <p *ngIf="Institucion?.hasError('required')" class="error">
+              Debe ingresar el nombre de la institución que le otorgó el título.
+            </p>
+          </div>
+          
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Año egreso</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ingrese año de egreso" formControlName="fecha" [class.border-danger]="FechaInvalid">
+          </div>
+          <div *ngIf="Fecha?.errors  && Fecha?.touched">
+            <p *ngIf="Fecha?.hasError('required')" class="error">
+              Debe ingresar la fecha de egreso.
+            </p>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+
+      </form>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- ELIMNAR FORMACIÓN ACADÉMICA-->
+
+<div class="modal fade" id="delAc" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que desea eliminar este título?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- Button modal AGREGAR CURSO O CAPACITACIÓN-->
+
+<div class="modal fade" id="addCap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Curso o Capacitación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Fecha de expedición</label>
+            <input type="text" class="form-control" id="formGroupExampleInput"
+              placeholder="Ingrese la fecha de expedición del certificado" formControlName="fecha"
+              [class.border-danger]="FechaInvalid">
+          </div>
+          <div *ngIf="Fecha?.errors  && Fecha?.touched">
+            <p *ngIf="Fecha?.hasError('required')" class="error">
+              Debe ingresar la fecha de realización del curso o capacitación.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del curso"
+              formControlName="nombre" [class.border-danger]="NombreInvalid">
+          </div>
+          <div *ngIf="Nombre?.errors  && Nombre?.touched">
+            <p *ngIf="Nombre?.hasError('required')" class="error">
+              Debe ingresar el nombre del curso o capacitación.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Institución</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Institución organizadora"
+              formControlName="institucion" [class.border-danger]="InstitucionInvalid">
+          </div>
+          <div *ngIf="Institucion?.errors  && Institucion?.touched">
+            <p *ngIf="Institucion?.hasError('required')" class="error">
+              Debe ingresar el nombre de la institución organizadora.
+            </p>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button modal EDITAR CURSO O CAPACITACIÓN-->
+
+<div class="modal fade" id="editCap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Curso o Capacitación</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Form -->
+      <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Fecha de expedición</label>
+            <input type="text" class="form-control" id="formGroupExampleInput"
+              placeholder="Ingrese la fecha de expedición del certificado" formControlName="fecha"
+              [class.border-danger]="FechaInvalid">
+          </div>
+          <div *ngIf="Fecha?.errors  && Fecha?.touched">
+            <p *ngIf="Fecha?.hasError('required')" class="error">
+              Debe ingresar la fecha de realización del curso o capacitación.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del curso" formControlName="nombre" [class.border-danger]="NombreInvalid">
+          </div>
+          <div *ngIf="Nombre?.errors  && Nombre?.touched">
+            <p *ngIf="Nombre?.hasError('required')" class="error">
+              Debe ingresar el nombre del curso o capacitación.
+            </p>
+          </div>
+
+          <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Institución</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Institución organizadora" formControlName="institucion" [class.border-danger]="InstitucionInvalid">
+          </div>
+          <div *ngIf="Institucion?.errors  && Institucion?.touched">
+            <p *ngIf="Institucion?.hasError('required')" class="error">
+              Debe ingresar el nombre de la institución organizadora.
+            </p>
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-success">Guardar cambios</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Button modal ELIMNAR Curso o Capacitación-->
+
+<div class="modal fade" id="delCap" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">¿Está seguro que desea eliminar este Curso?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

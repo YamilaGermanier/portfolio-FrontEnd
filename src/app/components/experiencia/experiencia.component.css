@@ -1,0 +1,47 @@
+.experiencia {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .edit-bottoms {
+    background-color: hsl(34, 78%, 91%, 0.70);
+  }
+  
+  .tablaExp {
+    margin-top: 50px;
+    background-color: hsl(36, 43%, 84%);
+    color: #000;
+    font-weight: bold;
+  }
+  
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.9);
+  }
+
+  .container-fluid {
+    row-gap: 5px;
+  }
+
+  /*responsive*/
+  @media (max-width:1200px){
+    .exp {
+      font-size: 2vw;
+    } 
+  }
+
+  @media (max-width:768px){
+    .exp {
+      font-size: 4vw;
+    } 
+  }
+
+  @media (max-width:550px){
+    .exp {
+      font-size: 6vw;
+    } 
+  }

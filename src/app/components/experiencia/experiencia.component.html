@@ -1,0 +1,52 @@
+<!-- Sección Experiencia-->
+
+<section class="experiencia seccion-color" id="Experiencia">
+
+
+    <div class="d-flex align-self-end me-5">
+        <!-- Button modal MÁS EXPERIENCIA -->
+        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#masExp" *ngIf="adminLog">
+            <i class="bi bi-plus-square-fill"></i>
+        </button>
+    </div>
+
+
+    <h1 class="seccion-titulo justify-content-center">Experiencias</h1>
+
+    <div class="container-fluid tablaExp" *ngFor="let experiencia of experiencias">
+
+        <div class="exp row my-5">
+
+            <div class="col-md-2">
+                {{experiencia.inicio}}-{{experiencia.fin}}
+            </div>
+            <div class="col-md-3">
+                {{experiencia.puesto}}
+            </div>
+            <div class="col-md-5">
+                {{experiencia.descripcion}}
+            </div>
+            <div class="col-md-2" *ngIf="adminLog">
+
+                <ul class="d-flex align-self-end me-5" >
+                    <ol>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editExp">
+                            <i class="bi bi-pencil-square"></i>
+                        </button>
+                    </ol>
+                    <ol>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#delExp">
+                            <i class="bi bi-trash-fill"></i>
+                        </button>
+                    </ol>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <app-modal-experiencia></app-modal-experiencia>
+
+</section>
