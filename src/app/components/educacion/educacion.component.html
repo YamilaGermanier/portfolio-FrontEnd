@@ -21,7 +21,7 @@
 
                 <div class="col-md-3 card"  *ngFor="let titulo of titulos">
                     <div class="card-body">
-                        <img src="{{titulo.logoInstitucion}}" alt="Logo de la institución educativa">
+                        <img src={{titulo.logoInstitucion}} alt="Logo de la institución educativa">
                         <h4 class="card-title text-center">{{titulo.nombreTitulo}}</h4>
                         <p class="card-text">{{titulo.institucion}}</p>
                         <p>{{titulo.fechaEgreso}}</p>
