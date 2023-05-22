@@ -28,7 +28,7 @@ export class ExperienciasService {
     return this.httpClient.put<any>(this.url + 'editar', expe);
   }
 
- borrar(id: number): Observable<any> {
-    return this.httpClient.delete(this.url + this.url + '/borrar/' + id); //tampoco funciona esta opcion T_T
+  borrar(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.url + `borrar/${id}`); //tampoco funciona esta opcion T_T
   }
 }
