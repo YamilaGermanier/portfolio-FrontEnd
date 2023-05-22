@@ -32,7 +32,12 @@ export class ModalExperienciaComponent implements OnInit{
       this.expeServ.crear(this.expe).subscribe(data => {this.expe = data});
     }
     }
-
+    
+    onCrear():void{
+      const experiencia = new Experiencias(this.id, this.puesto, this.inicio, this.fin, this.descripcion);
+      this.expeServ.crear(experiencia).subscribe(data =>{alert("Experiencia creada correctamente")
+      window.location.reload();})
+    }
 
   ngOnInit(): void{}
 
@@ -74,11 +79,6 @@ export class ModalExperienciaComponent implements OnInit{
     this.form.reset();
   }
 
-  onCrear():void{
-    const experiencia = new Experiencias(this.id, this.puesto, this.inicio, this.fin, this.descripcion);
-    this.expeServ.crear(experiencia).subscribe(data =>{alert("Experiencia creada correctamente")
-    window.location.reload();})
-  }
 
 onEnviar(event: Event){
 

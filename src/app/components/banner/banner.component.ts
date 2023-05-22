@@ -24,7 +24,7 @@ export class BannerComponent implements OnInit {
   }
   
   ngOnInit(): void {
-   this.banServ.verBanner(1).subscribe(data =>{
+   this.banServ.verBanner(2).subscribe(data =>{
     this.banner = data;
    });
   }
